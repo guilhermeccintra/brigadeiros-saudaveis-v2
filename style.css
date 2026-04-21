@@ -703,6 +703,7 @@ footer p {
 }
 .testimonial-img {
     width: 100%;
+    aspect-ratio: 1 / 1;
     border-radius: 8px;
     margin-bottom: 1rem;
     object-fit: cover;
