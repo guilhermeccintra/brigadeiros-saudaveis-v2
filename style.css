@@ -692,7 +692,7 @@ footer p {
     display: flex;
     gap: 30px;
     width: max-content;
-    animation: scrollCarousel 25s linear infinite;
+    animation: scrollCarousel 150s linear infinite;
 }
 .carousel-track:hover {
     animation-play-state: paused;
