@@ -530,7 +530,8 @@ body {
 }
 .urgency-banner {
     background: #FFECB3;
-    color: #b7790b;
+    color: var(--primary);
+    font-weight: 700;
     text-align: center;
     padding: 15px;
     border-radius: 10px;
