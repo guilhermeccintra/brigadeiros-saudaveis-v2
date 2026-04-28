@@ -477,7 +477,9 @@ body {
     padding: 2.5rem;
     display: flex;
     gap: 1.5rem;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
     transition: var(--transition);
     position: relative;
     overflow: hidden;
@@ -489,8 +491,8 @@ body {
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 .bonus-icon-wrapper {
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    height: auto;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -498,6 +500,7 @@ body {
     font-size: 2.5rem;
     color: var(--text-dark);
     flex-shrink: 0;
+    overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 .bonus-content h4 {
@@ -729,12 +732,14 @@ footer p {
     animation-play-state: paused;
 }
 .carousel-img {
-    height: 400px;
+    height: 500px;
+    width: auto;
+    aspect-ratio: 391/719;
     flex-shrink: 0;
     max-width: none;
     border-radius: 12px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    object-fit: contain;
+    object-fit: cover;
     background: #fff;
     padding: 5px;
     border: 1px solid rgba(235, 182, 108, 0.3);
@@ -747,8 +752,8 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    .carousel-img { height: 350px; }
+    .carousel-img { height: 437px; }
 }
 @media (max-width: 480px) {
-    .carousel-img { height: 280px; }
+    .carousel-img { height: 350px; }
 }
