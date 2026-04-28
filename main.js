@@ -138,6 +138,7 @@ function startPromoTimer() {
             String(secs).padStart(2, '0');
     }
 
+    updateTimer();
     setInterval(updateTimer, 1000);
     updateTimer();
 }
