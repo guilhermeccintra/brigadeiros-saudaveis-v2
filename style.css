@@ -693,6 +693,18 @@ footer p {
 }
 
 @media (max-width: 576px) {
+    /* Redução de espaçamentos verticais entre blocos */
+    section { padding: 1.5rem 0 !important; }
+    .hero { padding: 1.5rem 0 !important; }
+    .offer-section { padding: 1rem 0 2rem 0 !important; }
+    .guarantee-section { padding: 1.5rem 0 0 0 !important; }
+    .testimonials-section { padding: 1.5rem 0 0 0 !important; }
+    .recipes-carousel-section { padding: 1.5rem 0 !important; }
+    .ideal-for-section { padding: 1.5rem 0 !important; }
+    .benefits-section { padding: 1.5rem 0 !important; }
+    .bonus-section { padding: 1.5rem 0 !important; }
+    .faq-section { padding: 1.5rem 0 !important; }
+    
     .headline { font-size: 2.2rem; }
     .subheadline { font-size: 1.1rem; }
     .pricing { width: 100%; padding: 1rem; }
