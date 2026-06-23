@@ -741,7 +741,7 @@ body {
 }
 .ideal-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -1169,8 +1169,8 @@ footer p {
         <div class="container hero-content">
             <div class="hero-text">
                 <span class="badge">Brigadeiros, bolos, tortas, pudins e geléias</span>
-                <h1 class="headline" style="margin-bottom: 0.5rem;"><span class="highlight">100 Receitas Saudáveis</span> Pra Fazer Em Casa</h1>
-                <p class="subheadline fade-up delay-1" style="margin-bottom: 0.5rem;">Brigadeiros, bolos, tortas, pudins e geleias com sabor de doce de verdade, em receitas fáceis e rápidas para o dia a dia</p>
+                <h1 class="headline" style="margin-bottom: 0.5rem;"><span style="color: #9F1E31;">100 Receitas Saudáveis</span> Pra Fazer Em Casa</h1>
+                <p class="subheadline fade-up delay-1" style="margin-bottom: 0.5rem;">Brigadeiros, bolos, tortas, pudins e geleias com sabor de doce de verdade, em receitas fáceis e rápidas para o dia a dia.</p>
                 <p class="subheadline fade-up delay-1" style="margin-bottom: 0.5rem;"><span class="highlight">Sem açúcar • Sem glúten • Zero lactose</span></p>
 
 
@@ -1487,11 +1487,11 @@ footer p {
                 </div>
                 <div class="proof-text">
                     <h2 class="section-title">Sinta o sabor de um doce de verdade, <span class="highlight">sem abrir mão dos seus objetivos e sem perder o prazer de comer bem</span></h2>
-                    <p>Imagine morder uma sobremesa irresistível, com textura cremosa e aparência de confeitaria…<br>
+                    <p>Imagine morder uma sobremesa irresistível, com textura super cremosa e que derrete na boca…<br>
                         Sem gosto artificial, sem amargor e sem aquele "sabor fit" genérico.</p>
 
                     <p style="font-weight: 600; color: var(--primary);">Isso não é "doce saudável sem graça".<br>
-                        O resultado é digno de confeitaria premium e definitivamente não parece receita saudável.</p>
+                        O resultado é delicioso e perfeito para matar aquela vontade de doce de forma inteligente.</p>
 
                     <div class="features-list">
                         <div class="feature-item"><i class="fa-solid fa-check"></i> Sem açúcar refinado</div>
@@ -1545,18 +1545,7 @@ footer p {
                                         praticidade.</span>
                                 </div>
                             </div>
-                            <div class="ideal-item" style="align-items: flex-start;">
-                                <div class="ideal-icon" style="margin-top: 5px;">💰</div>
-                                <div class="ideal-text">
-                                    <span
-                                        style="display: block; font-weight: 700; margin-bottom: 4px; color: var(--primary);">Faturar
-                                        com doces saudáveis em casa</span>
-                                    <span
-                                        style="font-size: 0.95em; color: var(--text-light); line-height: 1.4; display: block;">Produzir
-                                        sobremesas com alto valor percebido para vender e aproveitar um mercado cada vez
-                                        mais em crescimento.</span>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -1588,10 +1577,9 @@ footer p {
                         <p>Receitas adaptadas para quem precisa evitar açúcar, proporcionando uma experiência gourmet com o verdadeiro sabor de doce.</p>
                     </div>
                     <div class="benefit-card hover-glow">
-                        <i class="fa-solid fa-sack-dollar icon-b"></i>
-                        <h3>Praticidade para produzir e até vender</h3>
-                        <p>Preparos rápidos e fáceis que permitem fazer em casa com agilidade, seja para consumo próprio
-                            ou para gerar renda com doces saudáveis.</p>
+                        <i class="fa-solid fa-clock icon-b"></i>
+                        <h3>Praticidade para o seu dia a dia</h3>
+                        <p>Preparos rápidos e fáceis que permitem fazer em casa com agilidade, perfeitos para encaixar na sua rotina corrida.</p>
                     </div>
                 </div>
             </div>
@@ -1806,7 +1794,42 @@ footer p {
 
                 <div class="offer-box">
                     <h2>Seu Acesso Completo</h2>
-                    <div class="price-strikethrough">Valor Normal da Coleção + Bônus: <s>R$ 219,60</s></div>
+                    
+                    <div style="text-align: left; background: #fff; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid rgba(235,182,108,0.3); box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                        <h3 style="font-size: 1.3rem; color: var(--primary); margin-bottom: 1.2rem; text-align: center;">O que você recebe hoje</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+                            <li style="display: flex; align-items: flex-start; font-size: 1.05rem; color: var(--text-dark);">
+                                <i class="fa-solid fa-check" style="color: #22c55e; margin-top: 4px; margin-right: 10px; font-size: 1.1rem;"></i>
+                                <span><strong>100 receitas doces saudáveis</strong></span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; font-size: 1.05rem; color: var(--text-dark);">
+                                <i class="fa-solid fa-check" style="color: #22c55e; margin-top: 4px; margin-right: 10px; font-size: 1.1rem;"></i>
+                                <span>Brigadeiros, bolos, tortas, pudins e geleias</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; font-size: 1.05rem; color: var(--text-dark);">
+                                <i class="fa-solid fa-check" style="color: #22c55e; margin-top: 4px; margin-right: 10px; font-size: 1.1rem;"></i>
+                                <span>Receitas fáceis e rápidas de preparar</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; font-size: 1.05rem; color: var(--text-dark);">
+                                <i class="fa-solid fa-check" style="color: #22c55e; margin-top: 4px; margin-right: 10px; font-size: 1.1rem;"></i>
+                                <span>Ingredientes simples para o dia a dia</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; font-size: 1.05rem; color: var(--text-dark);">
+                                <i class="fa-solid fa-check" style="color: #22c55e; margin-top: 4px; margin-right: 10px; font-size: 1.1rem;"></i>
+                                <span>Acesso imediato após a confirmação do pagamento</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; font-size: 1.05rem; color: var(--text-dark);">
+                                <i class="fa-solid fa-check" style="color: #22c55e; margin-top: 4px; margin-right: 10px; font-size: 1.1rem;"></i>
+                                <span>Atualizações futuras incluídas</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; font-size: 1.05rem; color: var(--text-dark);">
+                                <i class="fa-solid fa-check" style="color: #22c55e; margin-top: 4px; margin-right: 10px; font-size: 1.1rem;"></i>
+                                <span><strong>3 bônus exclusivos</strong> sem custo adicional (oferta de hoje)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="price-strikethrough">Valor total desta coleção e bônus: <s>R$ 219,60</s></div>
 
                     <p class="today-text">Mas, Apenas HOJE, você leva tudo por:</p>
 
