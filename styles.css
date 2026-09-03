@@ -120,7 +120,7 @@ body {font-family: var(--font-body);
 
 /* HERO SECTION */
 
-.hero {margin-top: 46px;
+.hero {margin-top: 40px;
     min-height: auto;
     display: flex;
     align-items: center;
