@@ -21,7 +21,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '2131888377628007');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
+<noscript><img class="inline-001" height="1" width="1"
 src="https://www.facebook.com/tr?id=2131888377628007&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
@@ -43,1105 +43,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receitas Saudáveis</title>
-    <style>
-        :root {
-            --primary: #5c351f;
-            --secondary: #9f1e31; 
-            --accent: #EBB66C;
-            --bg-light: #FAF5F0;
-            --bg-card: #ffffff;
-            --text-dark: #331A12;
-            --text-light: #7A5B4C;
-            --white: #ffffff;
-            --green: #2B7A0B;
-            --font-heading: 'Playfair Display', serif;
-            --font-body: 'Outfit', sans-serif;
-            --shadow-soft: 0 10px 30px rgba(92, 53, 31, 0.08);
-            --shadow-strong: 0 20px 40px rgba(92, 53, 31, 0.15)
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box
-        }
-
-        img {
-            max-width: 100%;
-            height: auto
-        }
-
-        html {
-            scroll-behavior: smooth;
-            overflow-x: hidden
-        }
-
-        body {
-            font-family: var(--font-body);
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-            overflow-x: hidden
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px
-        }
-
-        .highlight {
-            color: var(--secondary);
-            font-weight: 700
-        }
-
-        .darker {
-            color: var(--text-dark);
-            font-weight: 800 
-        }
-
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px)
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0)
-            }
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0)
-            }
-
-            50% {
-                transform: translateY(-15px)
-            }
-
-            100% {
-                transform: translateY(0)
-            }
-        }
-
-        .fade-up {
-            animation: .8s cubic-bezier(.2, .8, .2, 1) backwards fadeUp
-        }
-
-        .delay-1 {
-            animation-delay: .1s
-        }
-
-        .delay-2 {
-            animation-delay: .3s
-        }
-
-        .delay-3 {
-            animation-delay: .5s
-        }
-
-        .float-animation img {
-            animation: 6s ease-in-out infinite float
-        }
-
-        .hero {
-            margin-top: 46px;
-            min-height: auto;
-            display: flex;
-            align-items: center;
-            padding: 3rem 0;
-            position: relative;
-            overflow: hidden
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -20%;
-            left: -10%;
-            width: 50vw;
-            height: 50vw;
-            background: radial-gradient(circle, rgba(235, 182, 108, .2) 0, rgba(250, 245, 240, 0) 70%);
-            border-radius: 50%;
-            z-index: -1
-        }
-
-        .hero-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 2rem;
-            max-width: 900px;
-            margin: 0 auto
-        }
-
-        .badge {
-            display: inline-block;
-            background: rgba(159, 30, 49, .1);
-            color: var(--secondary);
-            padding: .5rem 1rem;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: .9rem;
-            margin-bottom: 1.5rem;
-            letter-spacing: 1px;
-            text-transform: uppercase
-        }
-
-        .headline {
-            font-family: var(--font-heading);
-            font-size: 3.5rem;
-            line-height: 1.1;
-            color: var(--primary);
-            margin-bottom: 1.5rem
-        }
-
-        .subheadline {
-            font-size: 1.25rem;
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.6
-        }
-
-        .pricing {
-            margin: 0 auto 2rem;
-            background: rgba(255, 255, 255, .6);
-            border: 1px solid rgba(235, 182, 108, .3);
-            padding: 1.5rem;
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-            display: block;
-            width: fit-content
-        }
-
-        .old-price {
-            font-size: 1rem;
-            color: var(--text-light);
-            text-decoration: line-through;
-            margin-bottom: -5px
-        }
-
-        .new-price {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--green);
-            line-height: 1
-        }
-
-        .hero-image {
-            position: relative;
-            z-index: 2;
-            margin: 1.5rem 0
-        }
-
-        .hero-image img {
-            width: 100%;
-            max-width: 450px;
-            border-radius: 20px;
-            box-shadow: var(--shadow-strong);
-            display: block;
-            margin: 0 auto;
-            object-fit: cover
-        }
-
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 1000
-        }
-
-        .whatsapp-float img {
-            width: 60px;
-            height: 60px
-        }
-
-        @media (max-width:768px) {
-            .hero {
-                margin-top: 55px
-            }
-
-            .whatsapp-float {
-                bottom: 20px;
-                right: 20px
-            }
-
-            .whatsapp-float img {
-                width: 50px;
-                height: 50px
-            }
-        }
-
-        @media (max-width:968px) {
-            .headline {
-                font-size: 2.8rem
-            }
-
-            .hero-image {
-                max-width: 100%;
-                margin: 0 auto 2rem
-            }
-
-            .hero::before {
-                width: 100vw;
-                height: 100vw;
-                top: -10%;
-                left: 0
-            }
-        }
-
-        @media (max-width:576px) {
-            .hero {
-                margin-top: 68px !important
-            }
-
-            .headline {
-                font-size: 2.5rem
-            }
-
-            .subheadline {
-                font-size: 1.1rem
-            }
-
-            .pricing {
-                width: 100%;
-                padding: 1rem
-            }
-        }
-
-        .fa-solid {
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            display: var(--fa-display, inline-block);
-            font-style: normal;
-            font-variant: normal;
-            line-height: 1;
-            text-rendering: auto
-        }
-
-        .fa-solid {
-            font-family: "Font Awesome 6 Free"
-        }
-
-        .fa-clock:before {
-            content: "\f017"
-        }
-
-        :host,
-        :root {
-            --fa-style-family-brands: "Font Awesome 6 Brands";
-            --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands"
-        }
-
-        :host,
-        :root {
-            --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free"
-        }
-
-        @font-face {
-            font-family: "Font Awesome 6 Free";
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-regular-400.woff2) format("woff2"), url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-regular-400.ttf) format("truetype")
-        }
-
-        :host,
-        :root {
-            --fa-style-family-classic: "Font Awesome 6 Free";
-            --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free"
-        }
-
-        @font-face {
-            font-family: "Font Awesome 6 Free";
-            font-style: normal;
-            font-weight: 900;
-            font-display: swap;
-            src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2) format("woff2"), url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.ttf) format("truetype")
-        }
-
-        .fa-solid {
-            font-weight: 900
-        }
-    
-:root {
-    /* Color Palette */
-    --primary: #5c351f; /* Dark rich brown */
-    --secondary: #9f1e31; /* Berry red for contrast */
-    --accent: #EBB66C; /* Golden accent */
-    --bg-light: #FAF5F0; /* Cream background */
-    --bg-card: #ffffff;
-    --text-dark: #331A12;
-    --text-light: #7A5B4C;
-    --white: #ffffff;
-    --green: #2B7A0B;
-    
-    /* Typography */
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Outfit', sans-serif;
-    
-    /* Transições e Sombras */
-    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    --shadow-soft: 0 10px 30px rgba(92, 53, 31, 0.08);
-    --shadow-strong: 0 20px 40px rgba(92, 53, 31, 0.15);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-}
-
-body {
-    font-family: var(--font-body);
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.text-center { text-align: center; }
-.text-white { color: var(--white); }
-
-/* Typography */
-.highlight {
-    color: var(--secondary);
-    font-weight: 700;
-}
-.highlight-alt {
-    color: var(--primary);
-    font-weight: 700;
-    font-family: var(--font-heading);
-}
-.highlight-gold {
-    color: var(--accent);
-}
-.darker {
-    color: var(--text-dark);
-    font-weight: 800;
-}
-
-.section-title {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: var(--primary);
-}
-.section-title.text-white {
-    color: var(--white);
-}
-
-/* Animations */
-@keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
-}
-@keyframes pulse {
-    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(159, 30, 49, 0.7); }
-    70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(159, 30, 49, 0); }
-    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(159, 30, 49, 0); }
-}
-@keyframes heartbeat {
-    0% { transform: scale(1); }
-    15% { transform: scale(1.05); }
-    30% { transform: scale(1); }
-    45% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-.fade-up { animation: fadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) backwards; }
-.delay-1 { animation-delay: 0.1s; }
-.delay-2 { animation-delay: 0.3s; }
-.delay-3 { animation-delay: 0.5s; }
-.delay-4 { animation-delay: 0.7s; }
-
-.float-animation img { animation: float 6s ease-in-out infinite; }
-.pulse:hover { animation: pulse 1.5s infinite; }
-.pulse-fast { animation: heartbeat 2s infinite; }
-
-/* Buttons */
-.cta-btn {
-    display: inline-block;
-    background: linear-gradient(135deg, var(--secondary), #d0203f);
-    color: var(--white);
-    font-size: 1.2rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.2rem 2.5rem;
-    border-radius: 50px;
-    box-shadow: 0 10px 20px rgba(159, 30, 49, 0.3);
-    transition: var(--transition);
-    border: 2px solid transparent;
-}
-.cta-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(159, 30, 49, 0.4);
-    background: linear-gradient(135deg, #d0203f, var(--secondary));
-}
-.cta-btn i { margin-left: 10px; }
-.block-btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: 1.5rem;
-    padding: 1.5rem 1rem;
-}
-
-/* HERO SECTION */
-.hero {
-    margin-top: 46px;
-    min-height: auto;
-    display: flex;
-    align-items: center;
-    padding: 3rem 0 3rem;
-    position: relative;
-    overflow: hidden;
-}
-.hero::before {
-    content: '';
-    position: absolute;
-    top: -20%; left: -10%;
-    width: 50vw; height: 50vw;
-    background: radial-gradient(circle, rgba(235, 182, 108, 0.2) 0%, rgba(250,245,240,0) 70%);
-    border-radius: 50%;
-    z-index: -1;
-}
-
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-}
-.badge {
-    display: inline-block;
-    background: rgba(159, 30, 49, 0.1);
-    color: var(--secondary);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-.headline {
-    font-family: var(--font-heading);
-    font-size: 3.5rem;
-    line-height: 1.1;
-    color: var(--primary);
-    margin-bottom: 1.5rem;
-}
-.subheadline {
-    font-size: 1.25rem;
-    color: var(--text-light);
-    margin-bottom: 2.5rem;
-    line-height: 1.6;
-}
-.pricing {
-    margin: 0 auto 2rem auto;
-    background: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(235, 182, 108, 0.3);
-    padding: 1.5rem;
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-    display: block;
-    width: fit-content;
-}
-.old-price {
-    font-size: 1rem;
-    color: var(--text-light);
-    text-decoration: line-through;
-    margin-bottom: -5px;
-}
-.new-price {
-    font-size: 3rem;
-    font-weight: 800;
-    color: var(--green);
-    line-height: 1;
-}
-.new-price .small {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--text-dark);
-}
-.safe-checkout {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: var(--text-light);
-    font-weight: 600;
-}
-.hero-image {
-    position: relative;
-    z-index: 2;
-    margin: 1.5rem 0;
-}
-.hero-image img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 20px;
-    box-shadow: var(--shadow-strong);
-    display: block;
-    margin: 0 auto;
-    object-fit: cover;
-}
-
-/* PROOF SECTION */
-.proof-section {
-    padding: 3rem 0;
-    background: var(--white);
-}
-.proof-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-.proof-img {
-    position: relative;
-    border-radius: 20px;
-}
-.proof-img img {
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: var(--shadow-strong);
-}
-.glass-tag {
-    position: absolute;
-    bottom: -20px;
-    right: -20px;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(15px);
-    padding: 1rem 2rem;
-    border-radius: 12px;
-    font-weight: 800;
-    color: var(--primary);
-    box-shadow: var(--shadow-soft);
-    border: 1px solid rgba(255,255,255,0.5);
-    font-size: 1.2rem;
-}
-.proof-text .title {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--text-dark);
-}
-.proof-text p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    color: var(--text-light);
-}
-.features-list {
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-.feature-item {
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.feature-item i {
-    color: var(--green);
-    background: rgba(43, 122, 11, 0.1);
-    padding: 8px;
-    border-radius: 50%;
-}
-
-/* BENEFITS SECTION */
-.benefits-section {
-    padding: 3rem 0 1rem 0;
-}
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    margin-bottom: 2.5rem;
-}
-.benefit-card {
-    background: var(--bg-card);
-    padding: 2.5rem 2rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow-soft);
-    text-align: center;
-    border-bottom: 4px solid var(--accent);
-    transition: var(--transition);
-}
-.hover-glow:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-strong);
-}
-.icon-b {
-    font-size: 3rem;
-    color: var(--accent);
-    margin-bottom: 1.5rem;
-}
-.benefit-card h3 {
-    font-family: var(--font-heading);
-    color: var(--primary);
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-.benefit-card p {
-    color: var(--text-light);
-    font-size: 1rem;
-}
-.full-radius { border-radius: 20px; }
-.shadow-lg { box-shadow: var(--shadow-strong); }
-.assortment-banner img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    display: block;
-}
-
-/* IDEAL FOR SECTION */
-.ideal-for-section {
-    padding: 3rem 0;
-    position: relative;
-}
-.glass-panel {
-    background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.5);
-    border-radius: 30px;
-    padding: 4rem;
-    box-shadow: var(--shadow-soft);
-    max-width: 900px;
-    margin: 0 auto;
-}
-.ideal-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-.ideal-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.2rem;
-    background: rgba(255, 255, 255, 0.4);
-    padding: 1.5rem;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    transition: var(--transition);
-}
-.ideal-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-soft);
-    background: rgba(255, 255, 255, 0.9);
-}
-.ideal-icon {
-    font-size: 2.2rem;
-    line-height: 1;
-    flex-shrink: 0;
-}
-.ideal-text {
-    font-size: 1.1rem;
-    color: var(--text-dark);
-    line-height: 1.5;
-}
-.ideal-text b {
-    color: var(--secondary);
-}
-
-/* WHAT YOU WILL GET */
-.content-section {
-    padding: 3rem 0;
-    background: var(--white);
-}
-.content-items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    margin-top: 3rem;
-}
-.c-item {
-    position: relative;
-    padding: 2.5rem 2.5rem;
-    background: var(--bg-card);
-    border-radius: 20px;
-    box-shadow: var(--shadow-soft);
-    border: 1px solid rgba(235, 182, 108, 0.3);
-    transition: var(--transition);
-    overflow: hidden;
-    z-index: 1;
-}
-.c-item::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; height: 5px;
-    background: linear-gradient(90deg, var(--accent), var(--secondary));
-}
-.c-number {
-    position: absolute;
-    top: -15px;
-    right: 5px;
-    font-size: 8rem;
-    font-weight: 800;
-    color: rgba(92, 53, 31, 0.03);
-    font-family: var(--font-heading);
-    z-index: -1;
-    line-height: 1;
-}
-.c-text {
-    position: relative;
-    z-index: 1;
-}
-.c-text h3 {
-    font-size: 1.4rem;
-    color: var(--primary);
-    margin-bottom: 1rem;
-    line-height: 1.4;
-}
-.c-text p {
-    color: var(--text-light);
-}
-
-/* BONUS SECTION */
-.bonus-section {
-    padding: 3rem 0;
-    background: linear-gradient(to bottom, #2b1810, var(--primary));
-    position: relative;
-    border-top: 1px solid rgba(235, 182, 108, 0.2);
-}
-.bonus-grid-premium {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
-}
-.bonus-card-premium {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(235, 182, 108, 0.2);
-    border-radius: 20px;
-    padding: 2.5rem;
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-}
-.bonus-card-premium:hover {
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateY(-5px);
-    border-color: var(--accent);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-}
-.bonus-icon-wrapper {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    color: var(--text-dark);
-    flex-shrink: 0;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-.bonus-content h3 {
-    font-size: 1.5rem;
-    color: var(--white);
-    margin-bottom: 0.5rem;
-    line-height: 1.3;
-}
-.bonus-content p {
-    color: rgba(255,255,255,0.7);
-    font-size: 1.05rem;
-    margin-bottom: 1rem;
-}
-.bonus-content .bonus-highlight {
-    color: var(--accent);
-    font-weight: 600;
-    margin-bottom: 0;
-    background: rgba(235, 182, 108, 0.1);
-    padding: 10px 15px;
-    border-radius: 8px;
-    border-left: 3px solid var(--accent);
-}
-
-/* OFFER SECTION */
-.offer-section {
-    padding: 1rem 0 4rem 0;
-}
-.urgency-banner {
-    background: #FFECB3;
-    color: var(--primary);
-    font-weight: 700;
-    text-align: center;
-    padding: 15px;
-    border-radius: 10px;
-    font-weight: 700;
-    margin-bottom: 3rem;
-    border: 1px solid #FFE082;
-}
-.offer-box {
-    background: var(--white);
-    border: 3px solid var(--accent);
-    border-radius: 20px;
-    padding: 3rem 2rem;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    box-shadow: 0 25px 50px rgba(92, 53, 31, 0.15);
-    position: relative;
-}
-.offer-box h2 {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 2rem;
-}
-.price-strikethrough {
-    color: var(--text-light);
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-.today-text {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 2rem 0 0.5rem;
-    color: var(--text-dark);
-}
-.final-price {
-    font-size: 4.5rem;
-    font-weight: 800;
-    color: var(--green);
-    line-height: 1;
-    margin-bottom: 0.5rem;
-}
-.or-installments {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    color: var(--text-light);
-}
-.guarantee-text {
-    margin-top: 2rem;
-    font-size: 0.95rem;
-    color: var(--text-light);
-}
-.guarantee-text i {
-    color: #4CAF50;
-    margin-right: 5px;
-}
-
-/* FAQ SECTION */
-.faq-section {
-    padding: 3rem 0;
-    background: var(--white);
-}
-.faq-accordion {
-    max-width: 800px;
-    margin: 0 auto;
-}
-.faq-item {
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    padding: 1.5rem 0;
-    cursor: pointer;
-}
-.faq-question {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--primary);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.faq-question i {
-    transition: var(--transition);
-}
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: var(--transition);
-    color: var(--text-light);
-    line-height: 1.6;
-}
-.faq-item.active .faq-answer {
-    max-height: 1500px;
-    padding-top: 1rem;
-}
-.faq-item.active .faq-question i {
-    transform: rotate(180deg);
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 1000;
-    transition: var(--transition);
-}
-.whatsapp-float:hover {
-    transform: scale(1.1);
-}
-.whatsapp-float img {
-    width: 60px;
-    height: 60px;
-}
-@media (max-width: 768px) {
-    .whatsapp-float {
-        bottom: 20px;
-        right: 20px;
-    }
-    .whatsapp-float img {
-        width: 50px;
-        height: 50px;
-    }
-}
-
-/* FOOTER */
-footer {
-    background: #1A0F09;
-    color: rgba(255,255,255,0.5);
-    padding: 3rem 0;
-    font-size: 0.9rem;
-}
-footer a {
-    color: rgba(255,255,255,0.7);
-    text-decoration: none;
-}
-footer a:hover {
-    color: var(--white);
-}
-footer p {
-    margin-bottom: 1rem;
-}
-.policies {
-    margin-top: 2rem;
-}
-
-/* RESPONSIVE */
-@media (max-width: 968px) {
-    .headline { font-size: 2.8rem; }
-    .hero-image { max-width: 100%; margin: 0 auto 2rem; }
-    .hero::before { width: 100vw; height: 100vw; top: -10%; left: 0%; }
-    .hero { margin-top: 55px; }
-    
-    .proof-grid { grid-template-columns: 1fr; }
-    .proof-img { margin-bottom: 2rem; }
-    
-    .benefits-grid, .content-items, .bonus-grid-premium { grid-template-columns: 1fr; }
-    .bonus-card-premium { padding: 1.5rem; }
-    
-    .glass-panel { padding: 2rem; }
-    .c-number { font-size: 6rem; top: -5px; }
-}
-
-@media (max-width: 576px) {
-    /* Redução de espaçamentos verticais entre blocos */
-    section { padding: 1.5rem 0 !important; }
-    .hero { margin-top: 68px !important; padding: 1.5rem 0 !important; }
-    .offer-section { padding: 1rem 0 2rem 0 !important; }
-    .guarantee-section { padding: 1.5rem 0 0 0 !important; }
-    .testimonials-section { padding: 1.5rem 0 0 0 !important; }
-    .recipes-carousel-section { padding: 1.5rem 0 !important; }
-    .ideal-for-section { padding: 1.5rem 0 !important; }
-    .benefits-section { padding: 1.5rem 0 !important; }
-    .bonus-section { padding: 1.5rem 0 !important; }
-    .faq-section { padding: 1.5rem 0 !important; }
-    
-    .headline { font-size: 2.8rem; }
-    .subheadline { font-size: 1.1rem; }
-    .pricing { width: 100%; padding: 1rem; }
-    .cta-btn { padding: 1rem 1.5rem; font-size: 1rem; }
-    .final-price { font-size: 3.5rem; }
-    .offer-box { padding: 2rem 1.5rem; border-width: 2px; }
-    
-    .features-list { grid-template-columns: 1fr; }
-    .ideal-grid { grid-template-columns: 1fr; gap: 1rem; }
-    .ideal-text { font-size: 1rem; }
-    .ideal-icon { font-size: 1.8rem; }
-    
-    .bonus-card-premium { flex-direction: column; align-items: center; text-align: center; }
-    .bonus-content .bonus-highlight { text-align: left; }
-    .c-text h3 { font-size: 1.25rem; }
-    .faq-question { font-size: 1.1rem; }
-}
-
-/* TESTIMONIALS SECTION */
-.testimonials-section {
-    padding: 3rem 0 0 0;
-    background: #fdfaf7;
-    position: relative;
-}
-.carousel-wrapper {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    padding: 1rem 0 1.5rem 0;
-}
-.carousel-track {
-    display: flex;
-    gap: 30px;
-    width: max-content;
-    animation: scrollCarousel 150s linear infinite;
-}
-.carousel-track:hover {
-    animation-play-state: paused;
-}
-.carousel-img {
-    height: 500px;
-    width: auto;
-    aspect-ratio: 391/719;
-    flex-shrink: 0;
-    max-width: none;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    object-fit: cover;
-    background: #fff;
-    padding: 5px;
-    border: 1px solid rgba(235, 182, 108, 0.3);
-}
-
-@keyframes scrollCarousel {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-50% - 15px)); } 
-}
-
-@media (max-width: 768px) {
-    .carousel-img { height: 437px; }
-}
-@media (max-width: 480px) {
-    .carousel-img { height: 350px; }
-}
-
-</style>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preload" as="image" href="assets/mockup02.webp" fetchpriority="high">
 
     
@@ -1156,12 +58,12 @@ footer p {
 
 <body>
     <!-- Promo Timer Bar -->
-    <div class="promo-bar"
-        style="background-color: #9F1E31; color: white; padding: 10px; text-align: center; position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-        <i class="fa-solid fa-gift" style="margin-right: 8px;"></i> OFERTA COM DESCONTO + 3 BÔNUS EXCLUSIVOS ENCERRA EM
+    <div class="promo-bar inline-002"
+       >
+        <i class="fa-solid fa-gift inline-003"></i> OFERTA COM DESCONTO + 3 BÔNUS EXCLUSIVOS ENCERRA EM
         
-        <span id="countdown"
-            style="background: rgba(0,0,0,0.2); padding: 4px 8px; border-radius: 4px; font-family: 'Outfit', sans-serif; font-size: 1.1em; letter-spacing: 1px; margin-left: 5px;">00:00:00</span>
+        <span class="inline-004" id="countdown"
+           >00:00:00</span>
     </div>
 
     <!-- Hero Section -->
@@ -1169,67 +71,41 @@ footer p {
         <div class="container hero-content">
             <div class="hero-text">
                 
-                <h1 class="headline" style="margin-bottom: 0.5rem;">
-                    <span>Comer Saudável </span><span style="color: #9F1E31; display: block;">Nunca Foi Tão Gostoso</span>
+                <h1 class="headline inline-005">
+                    <span>Comer Saudável </span><span class="inline-006">Nunca Foi Tão Gostoso</span>
                 </h1>
-                    <p class="subheadline" style="margin-bottom:0.4rem;">Receitas deliciosas para matar a vontade de doce sem abrir mão dos seus objetivos.</p>
-                <p class="subheadline fade-up delay-1" style="margin-bottom: 0.5rem;"><span class="highlight">Sem açúcar • Sem glúten • Zero lactose</span></p>
+                    <p class="subheadline inline-007">Receitas deliciosas para matar a vontade de doce sem abrir mão dos seus objetivos.</p>
+                <p class="subheadline fade-up delay-1 inline-008"><span class="highlight">Sem açúcar • Sem glúten • Zero lactose</span></p>
 
 
-                <div class="hero-image inline-hero-image float-animation" style="margin-top: 2rem;">
-                    <img src="assets/mockup02.webp" alt="Mockup" width="1000" height="1000" fetchpriority="high"
-                        loading="eager" style="width: 100%; height: auto;">
-               <div style="margin-top: 1.8rem; text-align: center;">
+                <div class="hero-image inline-hero-image float-animation inline-009">
+                    <img class="inline-010" src="assets/mockup02.webp" alt="Mockup" width="1000" height="1000" fetchpriority="high"
+                        loading="eager">
+               <div class="inline-011">
     
-<p style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); margin-bottom: 0.5rem;">
+<p class="inline-012">
     Coleção completa + 3 bônus exclusivos
 </p>
 
-<div style="margin-top: 1.8rem; text-align: center;">
+<div class="inline-013">
 
     <!-- Preço riscado -->
-    <p style="
-        font-family: 'Outfit', sans-serif;
-        font-size: 1rem;
-        color: var(--text-light);
-        text-decoration: line-through;
-        margin: 0 0 0.35rem 0;
-        line-height: 1.2;
-    ">
+    <p class="inline-014">
         <strong>R$ 159,60</strong>
     </p>
 
     <!-- Preço à vista -->
-    <div style="
-        font-family: 'Outfit', sans-serif;
-        font-size: 42px;
-        font-weight: 800;
-        color: var(--green);
-        line-height: 1;
-        margin: 0 0 0.45rem 0;
-    ">
+    <div class="inline-015">
         R$ 37,90
     </div>
 
     <!-- Parcelamento -->
-    <p style="
-        font-family: 'Outfit', sans-serif;
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: var(--text-light);
-        margin: 0 0 0.4rem 0;
-    ">
+    <p class="inline-016">
         ou 6x de R$ 7,11 no cartão
     </p>
 
     <!-- Preço por receita -->
-    <p style="
-        font-family: 'Outfit', sans-serif;
-        font-size: 1rem;
-        font-weight: 700;
-        color: var(--green);
-        margin: 0 0 2rem 0;
-    ">
+    <p class="inline-017">
         (menos de R$ 0,40 por receita)
     </p>
 
@@ -1237,7 +113,7 @@ footer p {
 
 </div>
 
-                    <div class="urgency-banner" style="margin: 0 auto 1.5rem auto;">
+                    <div class="urgency-banner inline-018">
                         ⚠️ Atenção: esta oferta é por tempo limitado. Em breve, o valor volta ao original.
                     </div>
 
@@ -1247,29 +123,19 @@ footer p {
                         não gostar, devolvemos 100% do seu dinheiro.</p>
                 </div>
 
-
-
-
-
-
-
-
-
-
-
             </div>
         </div>
     </header>
     <main>
 <!-- Recipes Carousel -->
-        <section style="background: #ffffff; padding: 3rem 0;" class="recipes-carousel-section"
-            style="overflow: hidden; padding: 3rem 0; background: var(--bg-light);">
-            <div class="container text-center" style="margin-bottom: 2rem;">
-                <h2 class="section-title" style="margin-bottom: 0.5rem;">Olha o que você vai conseguir preparar com essa <span
+        <section class="recipes-carousel-section inline-019"
+           >
+            <div class="container text-center inline-020">
+                <h2 class="section-title inline-021">Olha o que você vai conseguir preparar com essa <span
                         class="highlight">coleção de receitas</span></h2>
             </div>
-            <div class="carousel-wrapper" style="background: transparent; padding: 0 0 1rem 0;">
-                <div class="carousel-track" style="animation-duration: 48s;">
+            <div class="carousel-wrapper inline-022">
+                <div class="carousel-track inline-023">
                     <!-- Set 1 -->
                     <img src="assets/receita01.webp" alt="Receita 1" class="recipe-img" width="500" height="500">
                     <img src="assets/receita02.webp" alt="Receita 2" class="recipe-img" width="500" height="500">
@@ -1290,53 +156,53 @@ footer p {
                     <img src="assets/receita08.webp" alt="Receita 8" class="recipe-img" width="500" height="500">
                 </div>
             </div>
-                <div class="faq-accordion"
-                    style="width: 100%; max-width: 800px; margin: 2rem auto 3rem auto; padding: 0 20px; text-align: left; box-sizing: border-box;">
+                <div class="faq-accordion inline-024"
+                   >
                     <!-- Módulo 1 -->
                     <div class="faq-item">
                         <div class="faq-question">BRIGADEIROS SAUDÁVEIS GOURMET <i class="fa-solid fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="list-style: none; padding-left: 0; line-height: 1.8; color: #555;">
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                            <ul class="inline-025">
+                                <li><i class="fa-solid fa-check inline-026"></i>
                                     Brigadeiro Gourmet de Cacau com Biomassa de Banana Verde</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-027"></i>
                                     Brigadeiro de Coco Cremoso com Toque de Baunilha</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-028"></i>
                                     Brigadeiro Tradicional Saudável de Cacau</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-029"></i>
                                     Brigadeiro de Colher Fit de Chocolate Intenso</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-030"></i>
                                     Brigadeiro Branco Saudável Tipo Beijinho</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-031"></i>
                                     Brigadeiro de Leite em Pó Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-032"></i>
                                     Brigadeiro de Paçoca Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-033"></i>
                                     Brigadeiro de Café Gourmet</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-034"></i>
                                     Brigadeiro de Avelã Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-035"></i>
                                     Brigadeiro de Pistache Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-036"></i>
                                     Brigadeiro de Morango Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-037"></i>
                                     Brigadeiro Romeu e Julieta Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-038"></i>
                                     Brigadeiro de Limão Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-039"></i>
                                     Brigadeiro de Maracujá Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-040"></i>
                                     Brigadeiro de Banana com Canela</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-041"></i>
                                     Brigadeiro de Churros Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-042"></i>
                                     Brigadeiro de Coco Queimado Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-043"></i>
                                     Brigadeiro de Cookies and Cream Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-044"></i>
                                     Brigadeiro de Chocolate Branco Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-045"></i>
                                     Brigadeiro Meio Amargo Saudável</li>
                             </ul>
                         </div>
@@ -1347,46 +213,46 @@ footer p {
                         <div class="faq-question">BOLOS SAUDÁVEIS FUNCIONAIS <i class="fa-solid fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="list-style: none; padding-left: 0; line-height: 1.8; color: #555;">
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                            <ul class="inline-046">
+                                <li><i class="fa-solid fa-check inline-047"></i>
                                     Bolo de Cenoura Saudável com Cobertura de Cacau</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-048"></i>
                                     Bolo de Banana com Canela Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-049"></i>
                                     Bolo de Laranja Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-050"></i>
                                     Bolo de Maçã com Canela Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-051"></i>
                                     Bolo de Fubá Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-052"></i>
                                     Bolo de Coco Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-053"></i>
                                     Bolo Formigueiro Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-054"></i>
                                     Bolo de Canela Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-055"></i>
                                     Bolo de Chocolate com Cobertura Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-056"></i>
                                     Bolo de Abacaxi Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-057"></i>
                                     Bolo de Limão Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-058"></i>
                                     Bolo de Milho Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-059"></i>
                                     Bolo Mármore Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-060"></i>
                                     Bolo Simples de Baunilha Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-061"></i>
                                     Bolo de Café Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-062"></i>
                                     Bolo de Frutas Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-063"></i>
                                     Bolo de Coco com Fubá Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-064"></i>
                                     Bolo de Baunilha com Canela Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-065"></i>
                                     Bolo de Laranja com Fubá Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-066"></i>
                                     Bolo de Milho com Coco Saudável</li>
                             </ul>
                         </div>
@@ -1397,46 +263,46 @@ footer p {
                         <div class="faq-question">TORTAS SAUDÁVEIS ESPECIAIS <i class="fa-solid fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="list-style: none; padding-left: 0; line-height: 1.8; color: #555;">
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                            <ul class="inline-067">
+                                <li><i class="fa-solid fa-check inline-068"></i>
                                     Torta de Morango Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-069"></i>
                                     Torta de Maracujá Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-070"></i>
                                     Torta de Limão Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-071"></i>
                                     Torta de Framboesa Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-072"></i>
                                     Torta de Pera Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-073"></i>
                                     Torta de Banana com Canela Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-074"></i>
                                     Torta de Maçã Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-075"></i>
                                     Torta de Limão Siciliano Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-076"></i>
                                     Torta de Kiwi Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-077"></i>
                                     Torta de Uva Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-078"></i>
                                     Torta de Pêssego Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-079"></i>
                                     Torta de Maracujá e Limão Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-080"></i>
                                     Torta de Framboesa e Chocolate Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-081"></i>
                                     Torta de Chocolate e Nozes Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-082"></i>
                                     Torta de Limão e Coco Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-083"></i>
                                     Torta de Frutas Vermelhas Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-084"></i>
                                     Torta de Laranja e Amêndoas Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-085"></i>
                                     Torta de Café Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-086"></i>
                                     Torta de Coco e Frutas Tropicais Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-087"></i>
                                     Torta de Ameixa Saudável</li>
                             </ul>
                         </div>
@@ -1447,46 +313,46 @@ footer p {
                         <div class="faq-question">PUDINS SAUDÁVEIS CREMOSOS <i class="fa-solid fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="list-style: none; padding-left: 0; line-height: 1.8; color: #555;">
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                            <ul class="inline-088">
+                                <li><i class="fa-solid fa-check inline-089"></i>
                                     Pudim Tradicional Saudável de Leite</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-090"></i>
                                     Pudim de Leite Condensado Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-091"></i>
                                     Pudim de Coco Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-092"></i>
                                     Pudim de Baunilha Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-093"></i>
                                     Pudim de Chocolate Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-094"></i>
                                     Pudim de Café Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-095"></i>
                                     Pudim de Milho Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-096"></i>
                                     Pudim de Maracujá Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-097"></i>
                                     Pudim de Limão Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-098"></i>
                                     Pudim de Queijo Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-099"></i>
                                     Pudim de Laranja Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-100"></i>
                                     Pudim de Baunilha com Calda Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-101"></i>
                                     Pudim de Coco Queimado Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-102"></i>
                                     Pudim de Doce de Leite Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-103"></i>
                                     Pudim de Canela Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-104"></i>
                                     Pudim de Leite com Coco Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-105"></i>
                                     Pudim de Queijo com Coco Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-106"></i>
                                     Pudim de Abacaxi Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-107"></i>
                                     Pudim de Milho com Coco Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-108"></i>
                                     Pudim de Leite com Canela Saudável</li>
                             </ul>
                         </div>
@@ -1497,46 +363,46 @@ footer p {
                         <div class="faq-question">GELEIAS NATURAIS E ARTESANAIS <i class="fa-solid fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="list-style: none; padding-left: 0; line-height: 1.8; color: #555;">
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                            <ul class="inline-109">
+                                <li><i class="fa-solid fa-check inline-110"></i>
                                     Geléia de Morango Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-111"></i>
                                     Geléia de Uva Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-112"></i>
                                     Geléia de Maracujá Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-113"></i>
                                     Geléia de Goiaba Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-114"></i>
                                     Geléia de Ameixa Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-115"></i>
                                     Geléia de Amora Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-116"></i>
                                     Geléia de Pêssego Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-117"></i>
                                     Geléia de Laranja Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-118"></i>
                                     Geléia de Maçã Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-119"></i>
                                     Geléia de Frutas Vermelhas Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-120"></i>
                                     Geléia de Pera Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-121"></i>
                                     Geléia de Abacaxi Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-122"></i>
                                     Geléia de Tangerina Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-123"></i>
                                     Geléia de Pêssego com Maçã Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-124"></i>
                                     Geléia de Banana com Canela Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-125"></i>
                                     Geléia de Manga Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-126"></i>
                                     Geléia de Figo Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-127"></i>
                                     Geléia de Caju Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-128"></i>
                                     Geléia de Mirtilo Saudável</li>
-                                <li><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 8px;"></i>
+                                <li><i class="fa-solid fa-check inline-129"></i>
                                     Geléia de Damasco Saudável</li>
                             </ul>
                         </div>
@@ -1544,13 +410,13 @@ footer p {
                 </div>
         </section>
 <!-- Product Inside Carousel -->
-        <section style="background: var(--bg-light); padding: 3rem 0;" class="recipes-carousel-section"
-            style="overflow: hidden; padding: 3rem 0; background: var(--bg-light);">
-            <div class="container text-center" style="margin-bottom: 2rem;">
+        <section class="recipes-carousel-section inline-130"
+           >
+            <div class="container text-center inline-131">
                 <h2 class="section-title">Veja como são as <span class="highlight">receitas por dentro</span></h2>
             </div>
-            <div class="carousel-wrapper" style="background: transparent; padding: 0 0 1rem 0;">
-                <div class="carousel-track" style="animation-duration: 72s;">
+            <div class="carousel-wrapper inline-132">
+                <div class="carousel-track inline-133">
                     <!-- Set 1 -->
                     <img src="assets/100RECEITAS-01.webp" alt="Página 1" class="recipe-img" width="500" height="500">
                     <img src="assets/100RECEITAS-02.webp" alt="Página 2" class="recipe-img" width="500" height="500">
@@ -1583,8 +449,8 @@ footer p {
 <section class="proof-section">
             <div class="container proof-grid">
                 <div class="proof-img">
-                    <img src="assets/torta.webp" alt="Delicioso doces saudáveis" width="1024" height="1024"
-                        loading="lazy" decoding="async" style="width: 100%; height: auto; display: block;">
+                    <img class="inline-134" src="assets/torta.webp" alt="Delicioso doces saudáveis" width="1024" height="1024"
+                        loading="lazy" decoding="async">
 
                 </div>
                 <div class="proof-text">
@@ -1592,7 +458,7 @@ footer p {
                     <p>Imagine comer uma sobremesa deliciosa, cremosa e cheia de sabor…<br>
                     Nada de receitas sem graça ou com gosto artificial.</p>
 
-                    <p style="font-weight: 600; color: var(--primary);">Aqui você encontra receitas que realmente dão prazer de comer, enquanto mantém uma alimentação mais equilibrada.</p>
+                    <p class="inline-135">Aqui você encontra receitas que realmente dão prazer de comer, enquanto mantém uma alimentação mais equilibrada.</p>
 
                     <div class="features-list">
                         <div class="feature-item"><i class="fa-solid fa-check"></i> Sem açúcar</div>
@@ -1603,45 +469,45 @@ footer p {
                 </div>
             </div>
         </section>
-<section class="ideal-for-section"
-            style="background: #ffffff; padding: 3rem 0; border-top: 1px solid rgba(235,182,108,0.2); border-bottom: 1px solid rgba(235,182,108,0.2);">
+<section class="ideal-for-section inline-136"
+           >
             <div class="container">
                 <div class="ideal-wrapper glass-panel">
                     <div class="ideal-content">
                         <h2 class="section-title text-center">Ideal pra você que deseja:</h2>
                         <div class="ideal-grid">
-                            <div class="ideal-item" style="align-items: flex-start;">
-                                <div class="ideal-icon" style="margin-top: 5px;">🍮</div>
+                            <div class="ideal-item inline-137">
+                                <div class="ideal-icon inline-138">🍮</div>
                                 <div class="ideal-text">
                                     <span
-                                        style="display: block; font-weight: 700; margin-bottom: 4px; color: var(--primary);">Manter
+ class="inline-139"                                       >Manter
                                         a dieta sem abrir mão do doce</span>
                                     <span
-                                        style="font-size: 0.95em; color: var(--text-light); line-height: 1.4; display: block;">Desfrutar
+ class="inline-140"                                       >Desfrutar
                                         de sobremesas deliciosas sem sair do plano alimentar ou comprometer seus
                                         resultados.</span>
                                 </div>
                             </div>
-                            <div class="ideal-item" style="align-items: flex-start;">
-                                <div class="ideal-icon" style="margin-top: 5px;">👩‍👧</div>
+                            <div class="ideal-item inline-141">
+                                <div class="ideal-icon inline-142">👩‍👧</div>
                                 <div class="ideal-text">
                                     <span
-                                        style="display: block; font-weight: 700; margin-bottom: 4px; color: var(--primary);">Oferecer
+ class="inline-143"                                       >Oferecer
                                         doces mais saudáveis para sua família</span>
                                     <span
-                                        style="font-size: 0.95em; color: var(--text-light); line-height: 1.4; display: block;">Preparar
+ class="inline-144"                                       >Preparar
                                         receitas sem açúcar, sem glúten e sem lactose, mais seguras e nutritivas para
                                         crianças e familiares.</span>
                                 </div>
                             </div>
-                            <div class="ideal-item" style="align-items: flex-start;">
-                                <div class="ideal-icon" style="margin-top: 5px;">🩺</div>
+                            <div class="ideal-item inline-145">
+                                <div class="ideal-icon inline-146">🩺</div>
                                 <div class="ideal-text">
                                     <span
-                                        style="display: block; font-weight: 700; margin-bottom: 4px; color: var(--primary);">Consumir
+ class="inline-147"                                       >Consumir
                                         doces mesmo com restrições ao açúcar</span>
                                     <span
-                                        style="font-size: 0.95em; color: var(--text-light); line-height: 1.4; display: block;">Ter
+ class="inline-148"                                       >Ter
                                         opções pensadas para quem precisa evitar açúcar, sem abrir mão do sabor e da
                                         praticidade.</span>
                                 </div>
@@ -1652,7 +518,7 @@ footer p {
                 </div>
             </div>
         </section>
-<section class="benefits-section" style="background: #fdfaf7; padding: 3rem 0;">
+<section class="benefits-section inline-149">
             <div class="container">
                 <h2 class="section-title text-center">Por que essas receitas são para você?</h2>
 
@@ -1660,14 +526,14 @@ footer p {
                     <div class="benefit-card hover-glow">
                         <i class="fa-solid fa-heart-circle-check icon-b"></i>
                         <h3>Saúde sem abrir mão do sabor <span
-                                style="display: block; font-size: 0.85rem; font-weight: 500; opacity: 0.85; margin-top: 5px; color: var(--text-light);">(ideal
+ class="inline-150"                               >(ideal
                                 para quem está de dieta ou quer reduzir o açúcar)</span></h3>
                         <p>Aprenda combinações de ingredientes que mantêm a textura cremosa e o sabor de sobremesa de verdade.</p>
                     </div>
                     <div class="benefit-card hover-glow">
                         <i class="fa-solid fa-basket-shopping icon-b"></i>
                         <h3>Ingredientes simples para o dia a dia <span
-                                style="display: block; font-size: 0.85rem; font-weight: 500; opacity: 0.85; margin-top: 5px; color: var(--text-light);">(perfeito
+ class="inline-151"                               >(perfeito
                                 para mães e famílias)</span></h3>
                         <p>Receitas feitas com ingredientes acessíveis, fáceis de encontrar e ideais para preparar
                             opções mais seguras e nutritivas em casa.</p>
@@ -1685,15 +551,15 @@ footer p {
                 </div>
             </div>
         </section>
-<section class="testimonials-section" style="overflow: hidden;">
+<section class="testimonials-section inline-152">
             <div class="container">
-                <div class="text-center" style="margin-bottom: 2rem;">
+                <div class="text-center inline-153">
                     <h2 class="section-title">Resultados de nossas <span class="highlight">alunas</span></h2>
                 </div>
             </div>
 
             <div class="carousel-wrapper">
-                <div class="carousel-track" style="animation-duration: 96s;">
+                <div class="carousel-track inline-154">
                     <!-- Set 1 -->
                     <img src="assets/depoimento01.webp" alt="Depoimento 1" class="carousel-img" width="391"
                         height="719">
@@ -1768,83 +634,83 @@ footer p {
 <section class="bonus-section" id="bonus">
             <div class="container">
                 <div class="text-center">
-                    <span class="badge"
-                        style="background: rgba(235, 182, 108, 0.2); color: var(--accent); margin-bottom: 1rem;">OFERTA
+                    <span class="badge inline-155"
+                       >OFERTA
                         IMPERDÍVEL</span>
                     <h2 class="section-title text-white">Garantindo agora, você leva <span class="highlight-gold">3
                             BÔNUS
                             EXCLUSIVOS</span></h2>
-                    <p style="color: rgba(255,255,255,0.85); font-size: 1rem; font-weight: 600; margin-top: 0.5rem;">⏰
+                    <p class="inline-156">⏰
                         Encerra em: <span id="bonus-date"></span></p>
                 </div>
 
                 <div class="bonus-grid-premium">
                     <!-- Bonus 1 -->
                     <div class="bonus-card-premium">
-                        <div class="bonus-icon-wrapper"
-                            style="background: linear-gradient(135deg, var(--accent), #d4953e); padding: 5px;">
-                            <img src="assets/guia_de_substituicoes.webp" alt="Guia de Substituições Inteligentes"
+                        <div class="bonus-icon-wrapper inline-157"
+                           >
+                            <img class="inline-158" src="assets/guia_de_substituicoes.webp" alt="Guia de Substituições Inteligentes"
                                 width="500" height="500" loading="lazy" decoding="async"
-                                style="width: 100%; height: auto; aspect-ratio: 1/1; object-fit: contain; border-radius: 10px; display: block;">
+                               >
                         </div>
                         <div class="bonus-content">
                             <h3>Guia de Substituições Inteligentes</h3>
                             <p>Aprenda como adaptar qualquer receita para uma versão mais saudável, garantindo sabor e
                                 nutrição em suas criações culinárias</p>
-                            <div style="margin-top: 10px; font-size: 1.1rem; font-weight: 700;">
-                                <span style="text-decoration: line-through; color: rgba(255,255,255,0.5); font-size: 0.9em; margin-right: 8px;">R$ 29,90</span>
-                                <span style="color: var(--accent);">R$ 00,00</span>
+                            <div class="inline-159">
+                                <span class="inline-160">R$ 29,90</span>
+                                <span class="inline-161">R$ 00,00</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Bonus 2 -->
                     <div class="bonus-card-premium">
-                        <div class="bonus-icon-wrapper"
-                            style="background: linear-gradient(135deg, #a3f7bf, #0fa36d); padding: 5px;">
-                            <img src="assets/guia_de_adocantes.webp" alt="Adoçantes Naturais na Prática" width="500"
+                        <div class="bonus-icon-wrapper inline-162"
+                           >
+                            <img class="inline-163" src="assets/guia_de_adocantes.webp" alt="Adoçantes Naturais na Prática" width="500"
                                 height="500" loading="lazy" decoding="async"
-                                style="width: 100%; height: auto; aspect-ratio: 1/1; object-fit: contain; border-radius: 10px; display: block;">
+                               >
                         </div>
                         <div class="bonus-content">
                             <h3>Adoçantes Naturais na Prática</h3>
                             <p>Descubra como escolher e usar corretamente os melhores adoçantes naturais para obter
                                 resultados perfeitos e sem culpa em suas receitas</p>
-                            <div style="margin-top: 10px; font-size: 1.1rem; font-weight: 700;">
-                                <span style="text-decoration: line-through; color: rgba(255,255,255,0.5); font-size: 0.9em; margin-right: 8px;">R$ 29,90</span>
-                                <span style="color: var(--accent);">R$ 00,00</span>
+                            <div class="inline-164">
+                                <span class="inline-165">R$ 29,90</span>
+                                <span class="inline-166">R$ 00,00</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Bonus 3 -->
                     <div class="bonus-card-premium">
-                        <div class="bonus-icon-wrapper"
-                            style="background: linear-gradient(135deg, #f7baef, #c840af); padding: 5px;">
-                            <img src="assets/dicas_de_preparo.webp" alt="Dicas de Preparo e Conservação" width="500"
+                        <div class="bonus-icon-wrapper inline-167"
+                           >
+                            <img class="inline-168" src="assets/dicas_de_preparo.webp" alt="Dicas de Preparo e Conservação" width="500"
                                 height="500" loading="lazy" decoding="async"
-                                style="width: 100%; height: auto; aspect-ratio: 1/1; object-fit: contain; border-radius: 10px; display: block;">
+                               >
                         </div>
                         <div class="bonus-content">
                             <h3>Dicas de Preparo e Conservação</h3>
                             <p>Aumente a durabilidade e o sabor das suas receitas com dicas práticas e eficientes de
                                 preparo e armazenamento</p>
-                            <div style="margin-top: 10px; font-size: 1.1rem; font-weight: 700;">
-                                <span style="text-decoration: line-through; color: rgba(255,255,255,0.5); font-size: 0.9em; margin-right: 8px;">R$ 29,90</span>
-                                <span style="color: var(--accent);">R$ 00,00</span>
+                            <div class="inline-169">
+                                <span class="inline-170">R$ 29,90</span>
+                                <span class="inline-171">R$ 00,00</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-<section class="guarantee-section" style="padding: 3rem 0 0 0; background: var(--bg-light); border: none;">
-            <div class="container text-center" style="max-width: 800px; padding: 1rem 2rem; margin: 0 auto;">
-                <i class="fa-solid fa-shield-halved"
-                    style="font-size: 4rem; color: var(--accent); margin-bottom: 1.5rem;"></i>
-                <h2 class="section-title" style="margin-bottom: 1rem;">Risco Zero: <span class="highlight">Garantia de 7
+<section class="guarantee-section inline-172">
+            <div class="container text-center inline-173">
+                <i class="fa-solid fa-shield-halved inline-174"
+                   ></i>
+                <h2 class="section-title inline-175">Risco Zero: <span class="highlight">Garantia de 7
                         Dias</span></h2>
-                <p style="color: var(--text-dark); line-height: 1.8; font-size: 1.1rem; margin-bottom: 1rem;">
+                <p class="inline-176">
                     Nós confiamos tanto no sabor e no resultado dessas receitas que decidimos tirar todo o risco das
                     suas costas. Você tem <strong>7 dias completos</strong> para testar as receitas na sua própria
                     cozinha. Se você não amar o sabor, achar muito difícil ou simplesmente se arrepender, basta nos
@@ -1853,93 +719,67 @@ footer p {
 
             </div>
         </section>
-<section class="offer-section" id="payment" style="padding: 2rem 0 4rem 0; background: var(--bg-light);">
+<section class="offer-section inline-177" id="payment">
             <div class="container">
 
                 <div class="offer-box">
                     <h2>Seu Acesso Completo</h2>
                     
-                    <div style="text-align: left; background: #fff; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid rgba(235,182,108,0.3); box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                        <h3 style="font-size: 1.3rem; color: var(--primary); margin-bottom: 1.2rem; text-align: center;">O que você recebe hoje:</h3>
-                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
-                            <li style="display: flex; align-items: flex-start; font-size: 1.05rem; color: var(--text-dark);">
-                                <i class="fa-solid fa-check" style="color: #22c55e; margin-top: 4px; margin-right: 10px; font-size: 1.1rem;"></i>
+                    <div class="inline-178">
+                        <h3 class="inline-179">O que você recebe hoje:</h3>
+                        <ul class="inline-180">
+                            <li class="inline-181">
+                                <i class="fa-solid fa-check inline-182"></i>
                                 <span>Coleção <strong>100 Receitas Saudáveis pra Fazer em Casa</strong></span>
                             </li>
-                            <li style="display: flex; align-items: flex-start; font-size: 1.05rem; color: var(--text-dark);">
-                                <i class="fa-solid fa-check" style="color: #22c55e; margin-top: 4px; margin-right: 10px; font-size: 1.1rem;"></i>
+                            <li class="inline-183">
+                                <i class="fa-solid fa-check inline-184"></i>
                                 <span><strong>Bônus 01</strong> - Guia de Substituições Inteligentes</span>
                             </li>
-                            <li style="display: flex; align-items: flex-start; font-size: 1.05rem; color: var(--text-dark);">
-                                <i class="fa-solid fa-check" style="color: #22c55e; margin-top: 4px; margin-right: 10px; font-size: 1.1rem;"></i>
+                            <li class="inline-185">
+                                <i class="fa-solid fa-check inline-186"></i>
                                 <span><strong>Bônus 02</strong> - Adoçantes Naturais na Prática</span>
                             </li>
-                            <li style="display: flex; align-items: flex-start; font-size: 1.05rem; color: var(--text-dark);">
-                                <i class="fa-solid fa-check" style="color: #22c55e; margin-top: 4px; margin-right: 10px; font-size: 1.1rem;"></i>
+                            <li class="inline-187">
+                                <i class="fa-solid fa-check inline-188"></i>
                                 <span><strong>Bônus 03</strong> - Dicas de Preparo e Conservação</span>
                             </li>
-                            <li style="display: flex; align-items: flex-start; font-size: 1.05rem; color: var(--text-dark);">
-                                <i class="fa-solid fa-check" style="color: #22c55e; margin-top: 4px; margin-right: 10px; font-size: 1.1rem;"></i>
+                            <li class="inline-189">
+                                <i class="fa-solid fa-check inline-190"></i>
                                 <span>Atualizações futuras incluídas</span>
                             </li>
-                            <li style="display: flex; align-items: flex-start; font-size: 1.05rem; color: var(--text-dark);">
-                                <i class="fa-solid fa-check" style="color: #22c55e; margin-top: 4px; margin-right: 10px; font-size: 1.1rem;"></i>
+                            <li class="inline-191">
+                                <i class="fa-solid fa-check inline-192"></i>
                                 <span>Acesso imediato após a confirmação do pagamento</span>
                             </li>
                         </ul>
                     </div>
 
-                   <div style="margin-top: 1.8rem; text-align: center;">
+                   <div class="inline-193">
 
     <!-- Preço riscado -->
-    <p style="
-        font-family: 'Outfit', sans-serif;
-        font-size: 1rem;
-        color: var(--text-light);
-        text-decoration: line-through;
-        margin: 0 0 0.35rem 0;
-        line-height: 1.2;
-    ">
+    <p class="inline-194">
         <strong>R$ 159,60</strong>
     </p>
 
     <!-- Preço à vista -->
-    <div style="
-        font-family: 'Outfit', sans-serif;
-        font-size: 42px;
-        font-weight: 800;
-        color: var(--green);
-        line-height: 1;
-        margin: 0 0 0.45rem 0;
-    ">
+    <div class="inline-195">
         R$ 37,90
     </div>
 
     <!-- Parcelamento -->
-    <p style="
-        font-family: 'Outfit', sans-serif;
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: var(--text-light);
-        margin: 0 0 0.4rem 0;
-    ">
+    <p class="inline-196">
         ou 6x de R$ 7,11 no cartão
     </p>
 
     <!-- Preço por receita -->
-    <p style="
-        font-family: 'Outfit', sans-serif;
-        font-size: 1rem;
-        font-weight: 700;
-        color: var(--green);
-        margin: 0 0 2rem 0;
-    ">
+    <p class="inline-197">
         (menos de R$ 0,40 por receita)
     </p>
 
 </div>
 
-                    <div class="urgency-banner" style="margin: 0 auto 1.5rem auto;">
+                    <div class="urgency-banner inline-198">
                         ⚠️ Atenção: esta oferta é por tempo limitado. Em breve, o valor volta ao original.
                     </div>
 
@@ -1998,10 +838,10 @@ footer p {
         <div class="container text-center">
             <p>© 2026 - Premium Receitas - Todos os direitos reservados.</p>
             <p
-                style="margin-top: 0.5rem; margin-bottom: 1rem; font-size: 0.85rem; color: #bbb; max-width: 800px; margin-left: auto; margin-right: auto;">
+ class="inline-199"               >
                 É expressamente proibida a cópia ou reprodução deste produto, sujeito às penalidades do Art. 184 do
                 Código Penal e da Lei 9.610/98 (Lei dos Direitos Autorais).</p>
-            <p style="margin-bottom: 1rem;">CNPJ: 63.532.613/0001-90</p>
+            <p class="inline-200">CNPJ: 63.532.613/0001-90</p>
             <p class="policies"><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
         </div>
     </footer>
@@ -2018,8 +858,6 @@ footer p {
     <noscript>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     </noscript>
-
-
 
     <script>
         let viewContentFired = false;
