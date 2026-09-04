@@ -120,7 +120,7 @@ body {font-family: var(--font-body);
 
 /* HERO SECTION */
 
-.hero {margin-top: 40px;
+.hero {margin-top: 30px;
     min-height: auto;
     display: flex;
     align-items: center;
@@ -436,7 +436,7 @@ footer p {margin-bottom: 1rem;}
 
 .hero::before {width: 100vw; height: 100vw; top: -10%; left: 0%;}
 
-.hero {margin-top: 55px;}
+.hero {margin-top: 30px;}
 
 .proof-grid {grid-template-columns: 1fr;}
 
