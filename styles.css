@@ -181,7 +181,7 @@ body {font-family: var(--font-body);
 /* PROOF SECTION */
 
 .proof-section {padding: 3rem 0;
-    background: var(--bg-light);}
+    background: var(--white);}
 
 .proof-grid {display: grid;
     grid-template-columns: 1fr 1fr;
