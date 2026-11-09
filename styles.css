@@ -764,3 +764,92 @@ h1, h2, h3 {line-height: var(--line-heading);}
 
 
 
+
+/* ========================================
+   BARRA PROMOCIONAL OTIMIZADA
+======================================== */
+
+.promo-bar-otimizada {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: nowrap !important;
+    gap: 7px !important;
+
+    width: 100%;
+    padding: 10px 12px !important;
+    box-sizing: border-box;
+
+    text-align: center;
+    line-height: 1.2 !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+}
+
+/* TEXTO DESKTOP */
+.promo-text-desktop {
+    display: inline;
+}
+
+/* TEXTO MOBILE */
+.promo-text-mobile {
+    display: none;
+}
+
+/* CONTADOR */
+.promo-bar-otimizada #countdown {
+    display: inline-block;
+    flex-shrink: 0;
+    white-space: nowrap;
+
+    font-variant-numeric: tabular-nums;
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .promo-bar-otimizada {
+        padding: 8px 6px !important;
+        gap: 5px !important;
+
+        font-size: 10px !important;
+        line-height: 1.1 !important;
+        white-space: nowrap !important;
+    }
+
+    .promo-text-desktop {
+        display: none !important;
+    }
+
+    .promo-text-mobile {
+        display: inline !important;
+    }
+
+    .promo-bar-otimizada i {
+        font-size: 11px !important;
+        flex-shrink: 0;
+    }
+
+    .promo-bar-otimizada #countdown {
+        font-size: 11px !important;
+        padding: 4px 5px !important;
+        margin: 0 !important;
+    }
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 360px) {
+
+    .promo-bar-otimizada {
+        font-size: 9px !important;
+        gap: 3px !important;
+    }
+
+    .promo-bar-otimizada #countdown {
+        font-size: 10px !important;
+        padding: 3px 4px !important;
+    }
+}
