@@ -603,7 +603,7 @@ section {padding: 1.5rem 0 !important;}
 
 .inline-135 {font-weight: 600; color: var(--primary);}
 
-.inline-136 {background: #ffffff; padding: 3rem 0; border-top: 1px solid rgba(235,182,108,0.2); border-bottom: 1px solid rgba(235,182,108,0.2);}
+.inline-136 {background: var(--primary); padding: 3rem 0; border-top: 1px solid rgba(235,182,108,0.2); border-bottom: 1px solid rgba(235,182,108,0.2);}
 
 .inline-137 {align-items: flex-start;}
 
