@@ -100,3 +100,23 @@ function injectCurrentDate() {
     const bonusDate = document.getElementById('bonus-date');
     if (bonusDate) bonusDate.textContent = formatted;
 }
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a[href="#offer-box"]').forEach(function (botao) {
+        botao.addEventListener('click', function (e) {
+            const destino = document.querySelector('.offer-box');
+
+            if (destino) {
+                e.preventDefault();
+
+                destino.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+
