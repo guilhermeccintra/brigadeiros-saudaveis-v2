@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const label = button.querySelector('.carousel-toggle-label');
         if (!track || !label) return;
 
-        let paused = reducedMotion.matches;
+        let paused = false;
         const render = () => {
             track.classList.toggle('is-paused', paused);
             track.classList.toggle('is-playing', !paused);
