@@ -2,15 +2,37 @@ document.addEventListener('DOMContentLoaded', () => {
     // Schedule non-critical work when browser is idle to optimize main thread
     const scheduleWork = window.requestIdleCallback || ((cb) => setTimeout(cb, 1));
 
-    scheduleWork(() => {
-        // FAQ Accordion
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
+    // Preserve the accordion behavior, with keyboard access and independent groups.
+    document.querySelectorAll('.faq-accordion').forEach((accordion, groupIndex) => {
+        const items = Array.from(accordion.querySelectorAll('.faq-item'));
+        const setExpanded = (item, expanded) => {
+            item.classList.toggle('active', expanded);
+            item.querySelector('.faq-question').setAttribute('aria-expanded', String(expanded));
+            const answer = item.querySelector('.faq-answer');
+            answer.setAttribute('aria-hidden', String(!expanded));
+            answer.inert = !expanded;
+        };
+        items.forEach((item, itemIndex) => {
             const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            if (!question || !answer) return;
+            answer.id = answer.id || `faq-answer-${groupIndex}-${itemIndex}`;
+            question.setAttribute('aria-controls', answer.id);
+            if (question.tagName !== 'BUTTON') {
+                question.setAttribute('role', 'button');
+                question.tabIndex = 0;
+                question.addEventListener('keydown', event => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        question.click();
+                    }
+                });
+            }
+            setExpanded(item, item.classList.contains('active'));
             question.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
-                faqItems.forEach(i => i.classList.remove('active'));
-                if (!isActive) item.classList.add('active');
+                const expanded = item.classList.contains('active');
+                items.forEach(other => setExpanded(other, false));
+                if (!expanded) setExpanded(item, true);
             });
         });
     });
@@ -106,13 +128,14 @@ function injectCurrentDate() {
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('a[href="#offer-box"]').forEach(function (botao) {
         botao.addEventListener('click', function (e) {
-            const destino = document.querySelector('.offer-box');
+            const destino = document.getElementById('offer-box') || document.querySelector('.offer-box');
 
             if (destino) {
                 e.preventDefault();
 
+                destino.focus({ preventScroll: true });
                 destino.scrollIntoView({
-                    behavior: 'smooth',
+                    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
                     block: 'start'
                 });
             }
