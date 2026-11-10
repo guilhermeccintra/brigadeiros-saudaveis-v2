@@ -161,10 +161,15 @@ body {font-family: var(--font-body);
     color: var(--primary);
     margin-bottom: 1.5rem;}
 
-.subheadline {font-size: 1.25rem;
+.subheadline {
+    font-size: 1.25rem;
     color: var(--text-light);
     margin-bottom: 2.5rem;
-    line-height: 1.6;}
+    line-height: 1.6;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .hero-image {position: relative;
     z-index: 2;
