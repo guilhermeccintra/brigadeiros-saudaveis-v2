@@ -19,7 +19,8 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '2131888377628007');
-fbq('track', 'PageView');
+window._fbPageViewId = 'pv_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9);
+fbq('track', 'PageView', {}, { eventID: window._fbPageViewId });
 </script>
 <noscript><img class="inline-001" height="1" width="1"
 src="https://www.facebook.com/tr?id=2131888377628007&ev=PageView&noscript=1"
@@ -42,9 +43,9 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>100 Receitas Saudáveis pra Fazer em Casa | Coleção Digital</title>
-    <meta name="description" content="Conheça a coleção digital com 100 receitas de brigadeiros, bolos, tortas, pudins e geleias, mais 3 guias de apoio. Veja o material e a oferta completa.">
+    <meta name="description" content="Seus doces favoritos, em versões mais saudáveis. Conheça a coleção digital com 100 receitas passo a passo de bolos, brigadeiros, tortas, pudins e geleias + 3 bônus.">
     <link rel="stylesheet" href="styles.css?v=20261110">
-    <link rel="stylesheet" href="conversion.css?v=20261110">
+    <link rel="stylesheet" href="conversion.css?v=20261113-hero">
     <link rel="preload" as="image" href="assets/mockup02.webp" fetchpriority="high">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,24 +80,93 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 
 
-    <!-- Hero Section -->
-    <header class="hero">
+    <!-- Hero: proposta clara, coleção digital e acesso à oferta no primeiro bloco. -->
+    <header class="hero hero-conversion" aria-labelledby="hero-title">
         <div class="container hero-content">
-            <div class="hero-text">
-                
-                <h1 class="headline inline-005">
-                    <span>Comer Saudável </span><span class="inline-006">Nunca Foi Tão Gostoso</span>
-                </h1>
-                    <p class="subheadline inline-007">Aprenda a preparar bolos, brigadeiros e sobremesas irresistíveis, com receitas simples para fazer em casa.</p>
-                <p class="subheadline fade-up delay-1 inline-005"><span class="highlight">Sem açúcar • Sem glúten • Zero lactose</span></p>
+            <div class="hero-main">
+                <div class="hero-copy">
+                    <p class="hero-eyebrow">100 RECEITAS + 3 BÔNUS <span aria-hidden="true">·</span> COLEÇÃO DIGITAL</p>
+                    <h1 class="headline" id="hero-title">Seus doces favoritos,<span>em versões mais saudáveis.</span></h1>
+                    <p class="subheadline hero-description">Bolos, brigadeiros, tortas, pudins e geleias: <strong>100 receitas com ingredientes, medidas e passo a passo</strong> para preparar em casa e variar os doces da sua rotina.</p>
+                    <div class="hero-options">
+                        <p>Opções sem adição de açúcar, sem glúten e sem lactose.</p>
+                        <small>Conforme os ingredientes e as substituições de cada receita.</small>
+                    </div>
+                    <div class="hero-action">
+                        <a href="#offer-box" class="cta-btn block-btn pulse-fast">QUERO MINHA COLEÇÃO <span aria-hidden="true">🍰</span></a>
+                        <p class="hero-access">PDF para baixar <span aria-hidden="true">·</span> Acesso após o pagamento</p>
+                        <p class="guarantee-text hero-guarantee"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> <strong>7 dias de garantia.</strong> Não gostou? 100% do dinheiro de volta.</p>
+                    </div>
+                </div>
+                <figure class="hero-visual">
+                    <img src="assets/mockup02.webp" alt="Coleção digital 100 Receitas Saudáveis pra Fazer em Casa, com bolos, brigadeiros, tortas, pudins e geleias" width="1000" height="1000" fetchpriority="high" loading="eager" decoding="async">
+                    <figcaption>Consulte no celular, tablet ou computador.<br>Imprima se preferir.</figcaption>
+                </figure>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="collection-summary" aria-label="Resumo da coleção">
+            <div class="container collection-summary-grid">
+                <p><strong>100</strong><span>receitas para variar</span></p>
+                <p><strong>5</strong><span>categorias de doces</span></p>
+                <p><strong>3</strong><span>guias de apoio</span></p>
+                <p><strong>PDF</strong><span>para baixar e consultar</span></p>
+            </div>
+        </div>
 
-                <div class="hero-image inline-hero-image float-animation inline-009">
-                    <img class="inline-010" src="assets/mockup02.webp" alt="Mockup" width="1000" height="1000" fetchpriority="high"
-                        loading="eager">
-               <div class="inline-011">
+        <section class="recipes-carousel-section inline-019"
+           >
+            <div class="container text-center inline-020">
+                <p class="section-eyebrow">PARA O CAFÉ, A SOBREMESA E OS MOMENTOS EM FAMÍLIA</p>
+                <h2 class="section-title inline-005">Olha o que você vai conseguir preparar com essa <span
+                        class="highlight">coleção de receitas</span></h2>
+                <p class="section-intro">Brigadeiros, bolos, tortas, pudins e geleias. Escolha o que combina com a sua vontade de hoje.</p>
+            </div>
+            <div class="carousel-wrapper inline-022">
+                <div class="carousel-track inline-023" id="carousel-receitas">
+                    <!-- Set 1 -->
+                    <img src="assets/receita01.webp" alt="Receita 1" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
+                    <img src="assets/receita02.webp" alt="Receita 2" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
+                    <img src="assets/receita03.webp" alt="Receita 3" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
+                    <img src="assets/receita04.webp" alt="Receita 4" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
+                    <img src="assets/receita05.webp" alt="Receita 5" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
+                    <img src="assets/receita06.webp" alt="Receita 6" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
+                    <img src="assets/receita07.webp" alt="Receita 7" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
+                    <img src="assets/receita08.webp" alt="Receita 8" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
+                    <!-- Set 2 -->
+                    <img src="assets/receita01.webp" alt="Receita 1" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
+                    <img src="assets/receita02.webp" alt="Receita 2" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
+                    <img src="assets/receita03.webp" alt="Receita 3" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
+                    <img src="assets/receita04.webp" alt="Receita 4" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
+                    <img src="assets/receita05.webp" alt="Receita 5" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
+                    <img src="assets/receita06.webp" alt="Receita 6" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
+                    <img src="assets/receita07.webp" alt="Receita 7" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
+                    <img src="assets/receita08.webp" alt="Receita 8" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
+                </div>
+            </div>
 
 
-<div class="faq-accordion inline-024"
+        
+        <div class="carousel-toolbar container">
+                <p>Veja os detalhes no seu ritmo.</p>
+                <button type="button" class="carousel-toggle" aria-controls="carousel-receitas" aria-pressed="false" data-carousel-label="receitas" hidden>
+                    <span class="carousel-toggle-label">Pausar carrossel</span>
+                    <span class="visually-hidden"> de receitas</span>
+                </button>
+            </div>
+        <div class="container"><div class="section-cta">
+                <a href="#offer-box" class="cta-btn collection-cta">QUERO MINHA COLEÇÃO <span aria-hidden="true">🍰</span></a>
+                <p class="cta-note">Conheça a oferta da coleção completa + 3 bônus.</p>
+            </div></div>
+        </section>
+
+        <section class="recipe-catalog" aria-labelledby="catalog-title">
+            <div class="container">
+                <p class="section-eyebrow text-center">5 CATEGORIAS · 20 RECEITAS EM CADA UMA</p>
+                <h2 class="section-title text-center" id="catalog-title">Dos brigadeiros às geleias,<br><span class="highlight">escolha por onde começar.</span></h2>
+                <p class="section-intro">Abra cada categoria e conheça as 100 receitas incluídas na coleção.</p>
+                <div class="faq-accordion inline-024"
                    >
                     <!-- Módulo 1 -->
                     <div class="faq-item">
@@ -348,77 +418,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                         </div>
                     </div>
                 </div>
-
-
-</div>
-
-                    
-<a href="#offer-box" class="cta-btn block-btn pulse-fast">QUERO MINHA COLEÇÃO 🍰</a>
-                    <p class="guarantee-text"><i class="fa-solid fa-shield-halved"></i> 7 Dias de Garantia
-                        Incondicional. Se
-                        não gostar, devolvemos 100% do seu dinheiro.</p>
-                    
-
-
-                </div>
-
             </div>
-        </div>
-    </header>
-    <main>
-        <div class="collection-summary" aria-label="Resumo da coleção">
-            <div class="container collection-summary-grid">
-                <p><strong>100</strong><span>receitas para variar</span></p>
-                <p><strong>5</strong><span>categorias de doces</span></p>
-                <p><strong>3</strong><span>guias de apoio</span></p>
-                <p><strong>PDF</strong><span>para baixar e consultar</span></p>
-            </div>
-        </div>
-
-        <section class="recipes-carousel-section inline-019"
-           >
-            <div class="container text-center inline-020">
-                <p class="section-eyebrow">PARA O CAFÉ, A SOBREMESA E OS MOMENTOS EM FAMÍLIA</p>
-                <h2 class="section-title inline-005">Olha o que você vai conseguir preparar com essa <span
-                        class="highlight">coleção de receitas</span></h2>
-                <p class="section-intro">Brigadeiros, bolos, tortas, pudins e geleias. Escolha o que combina com a sua vontade de hoje.</p>
-            </div>
-            <div class="carousel-wrapper inline-022">
-                <div class="carousel-track inline-023" id="carousel-receitas">
-                    <!-- Set 1 -->
-                    <img src="assets/receita01.webp" alt="Receita 1" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
-                    <img src="assets/receita02.webp" alt="Receita 2" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
-                    <img src="assets/receita03.webp" alt="Receita 3" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
-                    <img src="assets/receita04.webp" alt="Receita 4" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
-                    <img src="assets/receita05.webp" alt="Receita 5" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
-                    <img src="assets/receita06.webp" alt="Receita 6" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
-                    <img src="assets/receita07.webp" alt="Receita 7" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
-                    <img src="assets/receita08.webp" alt="Receita 8" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
-                    <!-- Set 2 -->
-                    <img src="assets/receita01.webp" alt="Receita 1" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
-                    <img src="assets/receita02.webp" alt="Receita 2" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
-                    <img src="assets/receita03.webp" alt="Receita 3" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
-                    <img src="assets/receita04.webp" alt="Receita 4" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
-                    <img src="assets/receita05.webp" alt="Receita 5" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
-                    <img src="assets/receita06.webp" alt="Receita 6" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
-                    <img src="assets/receita07.webp" alt="Receita 7" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
-                    <img src="assets/receita08.webp" alt="Receita 8" class="recipe-img" width="500" height="500" loading="lazy" decoding="async">
-                </div>
-            </div>
-
-
-        
-        <div class="carousel-toolbar container">
-                <p>Veja os detalhes no seu ritmo.</p>
-                <button type="button" class="carousel-toggle" aria-controls="carousel-receitas" aria-pressed="false" data-carousel-label="receitas" hidden>
-                    <span class="carousel-toggle-label">Pausar carrossel</span>
-                    <span class="visually-hidden"> de receitas</span>
-                </button>
-            </div>
-        <div class="container"><div class="section-cta">
-                <a href="#offer-box" class="cta-btn collection-cta">QUERO MINHA COLEÇÃO <span aria-hidden="true">🍰</span></a>
-                <p class="cta-note">Conheça a oferta da coleção completa + 3 bônus.</p>
-            </div></div>
         </section>
 
         <section class="proof-section" aria-labelledby="proof-title">
@@ -838,8 +838,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                 <div class="closing-product"><img src="assets/mockup02.webp" alt="Coleção digital 100 Receitas Saudáveis pra Fazer em Casa" width="650" height="650" loading="lazy" decoding="async"><p>Coleção digital + 3 guias de apoio</p></div>
                 <div class="closing-copy">
                     <p class="section-eyebrow">SUA PRÓXIMA RECEITA COMEÇA AQUI</p>
-                    <h2 id="closing-title">Comer Saudável<br><span>Nunca Foi Tão Gostoso</span></h2>
-                    <p class="closing-intro">Aprenda a preparar bolos, brigadeiros e sobremesas irresistíveis, sem açúcar, sem glúten e sem lactose, com receitas simples para fazer em casa.</p>
+                    <h2 id="closing-title">Escolha seu próximo doce.<br><span>A receita está aqui.</span></h2>
+                    <p class="closing-intro">Leve as 100 receitas e os 3 guias para sua cozinha. Escolha o que preparar, confira os ingredientes e siga o passo a passo no seu ritmo.</p>
                     <ul class="closing-includes"><li>100 receitas em 5 categorias</li><li>3 guias para ajudar no preparo</li><li>PDFs para baixar e consultar</li></ul>
                     <a href="https://payfast.greenn.com.br/204560/offer/gMumvm?ch_id=145266&b_id_1=204572&b_offer_1=WpXHQ9&b_id_2=204576&b_offer_2=cCiYmJ&b_id_3=204577&b_offer_3=RtB9cb" class="cta-btn collection-cta" data-checkout>QUERO MINHA COLEÇÃO <span aria-hidden="true">🍰</span></a>
                     <p class="closing-assurance">Checkout Greenn · 7 dias de garantia<br>Acesso após a confirmação do pagamento.</p>
@@ -873,17 +873,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     </noscript>
 
-    <script>
-        let viewContentFired = false;
-        window.addEventListener('scroll', function() {
-            if (!viewContentFired && window.scrollY > 100) {
-                if (typeof fbq === 'function') {
-                    fbq('track', 'ViewContent');
-                }
-                viewContentFired = true;
-            }
-        });
-    </script>
+    <script src="tracking.js?v=20261113" defer></script>
 </body>
 
 </html>

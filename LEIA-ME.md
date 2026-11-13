@@ -1,86 +1,72 @@
-# Projeto atualizado — 100 Receitas Saudáveis
+# 100 Receitas Saudáveis — versão para público frio
 
-Atualização: 10/11/2026.
+Atualização: 13/11/2026. Base: arquivo `brigadeiros-saudaveis-2.zip` enviado nesta conversa.
 
-## O que mudou
+## O que foi melhorado
 
-- O HTML do primeiro bloco foi preservado, incluindo headline, subheadline, imagem, lista das 100 receitas e garantia. A alteração visual nesse bloco é a largura do botão, agora limitada a 340 px e adaptada ao celular.
-- Foram adicionados quatro botões “QUERO MINHA COLEÇÃO” antes da oferta: após as imagens das receitas, a apresentação interna do material, os bônus e os depoimentos. Todos levam à oferta na própria página.
-- A oferta ganhou a âncora real `#offer-box`, com espaço para a barra fixa. O destino funciona também como link HTML, sem depender do JavaScript.
-- A apresentação agora destaca a composição da coleção, as informações presentes nas páginas, a utilidade dos guias e a entrega em PDF.
-- Os blocos foram organizados para apresentar o produto, demonstrar o conteúdo, explicar o acesso e responder às dúvidas antes do fechamento.
-- O bloco de Amanda Souza foi colocado imediatamente depois da oferta, com a área da foto em branco. Não foram acrescentadas formação, experiência, certificações ou resultados não informados.
-- O fechamento antes do rodapé repete a mensagem inicial, resume o conteúdo e leva diretamente ao mesmo checkout da oferta.
-- As imagens, repetições, ordem dos slides e animações originais dos três carrosséis foram preservadas. As imagens das receitas receberam largura responsiva, carregamento adiado e controles para pausar/retomar.
-- Os acordeões mantêm a expansão exclusiva dentro de cada grupo e agora também funcionam por teclado, com estado acessível.
+### Primeiro bloco (HERO)
 
-## Preço e checkout
+**Headline:** Seus doces favoritos, em versões mais saudáveis.
 
-O preço continua em **R$ 49,90**, com os valores de referência, parcelamento e custo por receita do projeto original.
+**Subheadline:** Bolos, brigadeiros, tortas, pudins e geleias: 100 receitas com ingredientes, medidas e passo a passo para preparar em casa e variar os doces da sua rotina.
 
-O checkout da oferta e o do fechamento são:
+- A abertura apresenta um benefício específico e identifica a oferta como uma coleção digital com 100 receitas e 3 bônus.
+- O botão aparece junto à apresentação do produto, antes da lista de receitas. Ele continua levando à oferta na mesma página.
+- O formato PDF, o acesso após o pagamento e a garantia de 7 dias estão próximos do botão.
+- No desktop, texto e mockup ficam lado a lado. No celular, os elementos se organizam em uma coluna, com o botão antes da imagem.
+- A lista original das 100 receitas foi mantida integralmente e passou para um bloco próprio após o primeiro carrossel. São as mesmas cinco categorias, com 20 receitas em cada uma.
+- A mensagem sobre os ingredientes passou a ser “Opções sem adição de açúcar, sem glúten e sem lactose”, acompanhada da condição “Conforme os ingredientes e as substituições de cada receita”. As prévias do próprio produto indicam que algumas preparações exigem substituições; a página não promete que toda receita atende às três condições automaticamente.
+- O fechamento foi alinhado à proposta: “Escolha seu próximo doce. A receita está aqui.”
+- A descrição para mecanismos de busca foi atualizada e a referência de versão do CSS foi alterada para carregar os novos estilos.
 
-`https://pay.hotmart.com/P105611288V?off=kds8d39y&checkoutMode=10`
+O objetivo é tornar a oferta compreensível para quem chega por um anúncio e ainda não conhece o produto. A melhoria de conversão deve ser medida com tráfego real; não houve teste A/B nesta tarefa.
 
-Os scripts e identificadores de Meta Pixel, TikTok e UTMify foram mantidos. Não foram criados eventos de compra ou de checkout adicionais. A decoração dos dois links pela UTMify foi observada no navegador; isso não equivale a uma auditoria do recebimento de eventos nas plataformas.
+## Identidade e conteúdo preservados
 
-Ao mudar para **R$ 67,90**, revise em conjunto:
+- Paleta original: marrom, vinho, dourado e creme.
+- Fontes Playfair Display e Outfit.
+- Todos os 36 arquivos da pasta `assets`, sem alterações nos bytes.
+- Os três carrosséis, com as mesmas imagens, repetições, ordem e velocidades: 16, 24 e 32 slides.
+- Scripts `main.js`, `conversion.js`, `tracking.js` e `api/capi.js`, sem alterações.
+- Arquivo `styles.css`, sem alterações. As regras novas estão isoladas no fim de `conversion.css`.
+- Preço exibido de R$ 37,90, parcelamento anunciado, bônus, garantia, apresentação da autora, FAQ e checkout Greenn.
+- Os dois links de compra, incluindo seus parâmetros e order bumps, são exatamente os do arquivo recebido.
+- Meta Pixel, TikTok, UTMify e os identificadores existentes foram preservados.
+- Contador e data dos bônus mantêm a lógica original.
 
-1. O preço à vista no `index.html` (comentário `PREÇO`).
-2. O parcelamento anunciado: copie a condição real exibida no checkout.
-3. O texto “menos de R$ 0,50 por receita”. Com 100 receitas a R$ 67,90, o valor é R$ 0,679 por receita; a frase pode passar a “menos de R$ 0,68 por receita”.
-4. O preço da oferta correspondente na Hotmart e, se necessário, seu link. Há dois links diretos no HTML.
+## Arquivos modificados
 
-Não há preço repetido no bloco final, para facilitar essa alteração futura.
+1. `index.html`: HERO, posição do catálogo, mensagem final e descrição da página.
+2. `conversion.css`: estilos específicos do HERO e do catálogo.
+3. `LEIA-ME.md`: este documento, atualizado para a versão atual do projeto.
 
-## Como colocar a foto da Amanda
+Os demais arquivos do projeto foram mantidos. O pacote não inclui dependências instaladas ou histórico local de Git, que não são necessários para servir esta página.
 
-1. Salve a foto em `assets/amanda-souza.webp`.
-2. No `index.html`, procure `FOTO DA AMANDA`.
-3. Substitua somente esta linha:
+## Como aplicar
 
-```html
-<div class="author-photo author-photo--empty" aria-hidden="true"></div>
-```
+Para atualizar a mesma versão do site enviada nesta conversa, substitua `index.html` e `conversion.css` pelos arquivos desta pasta. A referência ao novo CSS já está no HTML.
 
-por:
+Para publicar a pasta completa, mantenha sua estrutura: HTML, os dois CSS, os três JavaScript da página, `assets/`, `api/` e a configuração de hospedagem existente. A página não exige build. A rota `/api/capi` depende do ambiente de servidor e das configurações já utilizadas no projeto.
 
-```html
-<img class="author-photo" src="assets/amanda-souza.webp" alt="Amanda Souza, criadora da coleção" width="600" height="750" loading="lazy" decoding="async">
-```
+Os scripts antigos de reorganização e edição são auxiliares e não precisam ser executados para publicar. Executá-los pode sobrescrever a página com regras de versões anteriores.
 
-Use preferencialmente uma foto vertical de proporção 4:5. O layout já está pronto para ela e não mostra imagem quebrada enquanto estiver vazia.
+## Validação realizada
 
-## Publicação
+- Comparação de todos os arquivos com o ZIP original, identificando apenas os três arquivos modificados acima.
+- Comparação exata dos três trilhos de carrossel, de todos os assets, dos scripts de funcionamento/rastreamento e dos dois links de checkout.
+- Conferência de IDs únicos, destinos das âncoras e existência dos arquivos locais referenciados.
+- Verificação de sintaxe dos quatro scripts JavaScript de funcionamento/rastreamento.
+- Inspeção visual em navegador no desktop e em larguras responsivas de 320, 360, 390, 768 e 1280 px, sem transbordamento horizontal nos títulos, textos e controles.
+- Botão do HERO testado: foco na oferta e rolagem até ela, com espaço para a barra fixa.
+- Os três carrosséis iniciam em movimento. Pausa, estabilidade durante a pausa e retomada foram conferidas individualmente.
+- As cinco categorias de receitas abrem uma por vez, com 20 itens em cada uma, sem corte das listas na menor largura testada.
+- Menus de receitas e FAQ testados por clique e teclado, com estado de expansão acessível.
+- Contador e data dos bônus observados em funcionamento.
 
-O site continua sendo HTML, CSS e JavaScript estáticos. Não há etapa de build necessária para exibir a página.
+Esta entrega não publica o site nem faz uma compra de teste. A confirmação de recebimento de eventos no Meta/TikTok, a execução da CAPI no servidor e o processamento do pagamento não foram validados em produção.
 
-Extraia o ZIP e publique o conteúdo da pasta do projeto na raiz do site, incluindo:
+## Pontos já existentes no material recebido
 
-- `index.html`
-- `styles.css` e `conversion.css`
-- `main.js` e `conversion.js`
-- A pasta `assets/` inteira
-- `vercel.json`, se estiver usando Vercel
-
-O ZIP também mantém os arquivos auxiliares do projeto original. Os scripts antigos de edição não precisam ser executados para publicar esta versão; executá-los pode alterar novamente os arquivos da página. Dependências instaladas, caches e histórico local de versionamento não são necessários para servir o site e não integram o pacote.
-
-## Conferências realizadas
-
-- Comparação do primeiro bloco com o original: HTML preservado.
-- Comparação de todas as imagens da pasta `assets`: arquivos preservados.
-- Conferência da sequência dos três carrosséis: 16, 24 e 32 slides, com as mesmas repetições do original.
-- Conferência de IDs únicos, âncoras, caminhos de arquivos locais e destinos de checkout.
-- Verificação da sintaxe dos scripts JavaScript.
-- Inspeção visual em desktop e em larguras de 320, 375, 390, 768 e 1280 px, sem transbordamento horizontal nos textos e controles principais.
-- Testes de rolagem até a oferta, expansão dos acordeões por mouse/teclado e pausa/retomada dos três carrosséis.
-- Conferência do contador e da data dos bônus em execução.
-
-Não foi feita uma compra de teste nem uma publicação em produção. A eficácia comercial precisa ser medida com tráfego e vendas reais.
-
-## Pontos encontrados no material original para revisar
-
-- Algumas prévias de páginas, como `assets/100RECEITAS-08.webp`, contêm o crédito “Escrito por: Guilherme de C. Cintra”. Confira a atribuição correta e alinhe o produto e suas prévias com a apresentação de Amanda Souza. As imagens originais não foram retocadas.
-- Essa mesma prévia contém uma observação sobre glúten e a necessidade de escolher a farinha adequada. Por isso, os blocos revisados não prometem adequação universal a restrições alimentares, e o FAQ orienta a consulta dos ingredientes de cada preparo. A headline e a subheadline originais foram preservadas conforme solicitado.
-- Os links “Termos de Uso” e “Política de Privacidade” do rodapé já apontavam para `#`. Eles foram preservados; ainda precisam receber os endereços dos seus documentos reais.
-- O contador continua seguindo a regra original de terminar ao fim de cada dia. A data dos bônus também continua sendo a data atual. Mantenha essas mensagens alinhadas às condições efetivamente praticadas na oferta.
+- Algumas prévias do produto trazem o crédito “Escrito por: Guilherme de C. Cintra”, enquanto a página apresenta Amanda Souza. As imagens e a apresentação da autora foram preservadas.
+- Os links de Termos de Uso e Política de Privacidade continuam apontando para `#`; não foram inventados documentos ou URLs.
+- O contador reinicia a cada dia conforme o código recebido. Não houve alteração das condições comerciais ou da regra de encerramento da oferta.
