@@ -65,12 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    scheduleWork(() => {
-        // Inject current date into promo bar and bonus section
-        injectCurrentDate();
-        // Start Promo Timer
-        startPromoTimer();
-    });
+    // Show the fixed campaign countdown as soon as the page is ready.
+    startPromoTimer();
 });
 
 
@@ -82,48 +78,38 @@ function startPromoTimer() {
     const timerDisplay = document.getElementById('countdown');
     if (!timerDisplay) return;
 
+    // Midnight on 01/12 marks the end of 30/11 in Brasília (UTC-3).
+    // This fixed 2026 deadline never resets at midnight or in a later year.
+    const campaignEndsAt = new Date('2026-12-01T00:00:00-03:00').getTime();
+
     function updateTimer() {
-        const now = new Date();
-        const endOfDay = new Date(now);
-        endOfDay.setHours(23, 59, 59, 999);
+        const totalSeconds = Math.max(0, Math.ceil((campaignEndsAt - Date.now()) / 1000));
 
-        let diff = endOfDay - now;
-        if (diff < 0) diff = 0;
-        
-        const hours = Math.floor(diff / (1000 * 60 * 60));
-        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const secs = Math.floor((diff % (1000 * 60)) / 1000);
+        if (totalSeconds === 0) {
+            timerDisplay.textContent = 'ENCERRADA';
+            timerDisplay.setAttribute('aria-label', 'Black November encerrada');
+            document.querySelectorAll('[data-campaign-ended]').forEach(element => {
+                element.textContent = element.dataset.campaignEnded;
+            });
+            return false;
+        }
 
-        timerDisplay.textContent = 
-            String(hours).padStart(2, '0') + ':' + 
-            String(mins).padStart(2, '0') + ':' + 
-            String(secs).padStart(2, '0');
+        const days = Math.floor(totalSeconds / 86400);
+        const hours = Math.floor((totalSeconds % 86400) / 3600);
+        const mins = Math.floor((totalSeconds % 3600) / 60);
+        const secs = totalSeconds % 60;
+
+        timerDisplay.textContent = `${String(days).padStart(2, '0')}d ` +
+            [hours, mins, secs].map(value => String(value).padStart(2, '0')).join(':');
+        timerDisplay.setAttribute('aria-label', `${days} dias, ${hours} horas, ${mins} minutos e ${secs} segundos para o fim da Black November`);
+        return true;
     }
 
-    updateTimer();
-    setInterval(updateTimer, 1000);
-    updateTimer();
+    if (!updateTimer()) return;
+    const intervalId = setInterval(() => {
+        if (!updateTimer()) clearInterval(intervalId);
+    }, 1000);
 }
-
-// ==========================================
-// CURRENT DATE INJECTION
-// ==========================================
-function injectCurrentDate() {
-    const now = new Date();
-    const formatted = now.toLocaleDateString('pt-BR', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric'
-    });
-
-    const promoDate = document.getElementById('promo-date');
-    if (promoDate) promoDate.textContent = formatted;
-
-    const bonusDate = document.getElementById('bonus-date');
-    if (bonusDate) bonusDate.textContent = formatted;
-}
-
-
 
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('a[href="#offer-box"]').forEach(function (botao) {

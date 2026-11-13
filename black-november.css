@@ -1,0 +1,95 @@
+/* Campanha temporária: cores restritas aos elementos de Black November.
+   A paleta, os botões e as demais seções continuam com o estilo original. */
+.promo-bar.black-november-bar {
+    background: #171717;
+    color: #f8f3e9;
+    border-bottom: 2px solid #d9b76e;
+    gap: 14px !important;
+    min-height: 44px;
+    box-shadow: 0 3px 12px #0002;
+}
+
+.black-november-label {
+    flex-shrink: 0;
+    color: #e8c77f;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.black-november-bar .promo-text-desktop {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.black-november-bar #countdown {
+    margin: 0;
+    padding: 5px 9px;
+    background: #29261f;
+    border: 1px solid #6e5c36;
+    border-radius: 5px;
+    color: #f5d890;
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+}
+
+.black-november-badge {
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 6px 12px;
+    border: 1px solid #a88848;
+    border-radius: 6px;
+    background: #1d1c1a;
+    color: #e8c77f;
+    font-size: 0.68rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.09em;
+}
+
+.offer-box .black-november-deadline {
+    background: #1d1c1a;
+    border-color: #a88848;
+    color: #f8f3e9;
+    font-weight: 400;
+}
+
+.black-november-deadline strong,
+.black-november-deadline time {
+    color: #e8c77f;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .promo-bar.black-november-bar {
+        gap: 7px !important;
+        padding: 8px 6px !important;
+        min-height: 38px;
+    }
+
+    .black-november-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.045em;
+    }
+
+    .black-november-bar .promo-text-mobile {
+        font-size: 0.56rem;
+        font-weight: 600;
+    }
+
+    .black-november-bar #countdown {
+        font-size: 0.68rem !important;
+        padding: 4px 5px !important;
+    }
+
+    .hero-conversion .black-november-badge {
+        margin-bottom: 12px;
+        font-size: 0.62rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .promo-bar.black-november-bar { gap: 5px !important; }
+    .black-november-label { font-size: 0.6rem; }
+}
